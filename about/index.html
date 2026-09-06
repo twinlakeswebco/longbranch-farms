@@ -198,7 +198,7 @@
 
   <!-- About Hero -->
   <section id="about-hero">
-    <div class="hero-bg loaded" style="background-image:url('../images/photo-20.jpeg');"></div>
+    <div class="hero-bg bg-photo-20 loaded"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Our Story</p>
@@ -234,41 +234,113 @@
   <section id="about-gallery">
     <div class="feature-grid">
       <div class="fg-item fg-item-tall">
-        <img src="../images/photo-17.jpeg" alt="Long Branch Farms pasture" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-17-480.webp 480w, ../images/photo-17-960.webp 960w, ../images/photo-17-1440.webp 1440w, ../images/photo-17-1920.webp 1920w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+          <img src="../images/photo-17.jpeg"
+            srcset="../images/photo-17-480.jpeg 480w, ../images/photo-17-960.jpeg 960w, ../images/photo-17.jpeg 1440w, ../images/photo-17-1920.jpeg 1920w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+            width="1440" height="1080" loading="lazy"
+            alt="Two Jersey milk cows in their barn stalls, looking out through the open gate at the pasture" />
+        </picture>
         <span class="fg-caption">Open Pasture</span>
       </div>
       <div class="fg-item fg-item-wide fg-item-sm">
-        <img src="../images/photo-10.jpeg" alt="Farm life at Long Branch Farms" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-10-480.webp 480w, ../images/photo-10-960.webp 960w, ../images/photo-10-1440.webp 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw" />
+          <img src="../images/photo-10.jpeg"
+            srcset="../images/photo-10-480.jpeg 480w, ../images/photo-10-960.jpeg 960w, ../images/photo-10.jpeg 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw"
+            width="1440" height="1920" loading="lazy"
+            alt="A white calf with black ears standing close to a farmer kneeling at the fence, its mother watching alongside" />
+        </picture>
         <span class="fg-caption">Daily Chores</span>
       </div>
       <div class="fg-item fg-item-sm">
-        <img src="../images/photo-14.jpeg" alt="Long Branch Farms animals" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-14-480.webp 480w, ../images/photo-14-960.webp 960w, ../images/photo-14-1440.webp 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+          <img src="../images/photo-14.jpeg"
+            srcset="../images/photo-14-480.jpeg 480w, ../images/photo-14-960.jpeg 960w, ../images/photo-14.jpeg 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+            width="1440" height="1920" loading="lazy"
+            alt="A newborn calf dozing in fresh straw with a hand cupped under its chin" />
+        </picture>
         <span class="fg-caption">The Herd</span>
       </div>
       <div class="fg-item fg-item-sm">
-        <img src="../images/photo-19.jpeg" alt="Long Branch Farms land" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-19-480.webp 480w, ../images/photo-19-960.webp 960w, ../images/photo-19-1440.webp 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+          <img src="../images/photo-19.jpeg"
+            srcset="../images/photo-19-480.jpeg 480w, ../images/photo-19-960.jpeg 960w, ../images/photo-19.jpeg 1440w"
+            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+            width="1440" height="1920" loading="lazy"
+            alt="A young child hugging a brown dairy cow in a pasture at sunset" />
+        </picture>
         <span class="fg-caption">Grayson County</span>
       </div>
     </div>
     <div class="photo-strip" style="margin-top:6px;">
       <div class="photo-strip-item">
-        <img src="../images/photo-4.jpeg" alt="Livestock feeding" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-4-480.webp 480w, ../images/photo-4-960.webp 960w, ../images/photo-4-1440.webp 1440w, ../images/photo-4-1920.webp 1920w"
+            sizes="(max-width: 960px) 50vw, 25vw" />
+          <img src="../images/photo-4.jpeg"
+            srcset="../images/photo-4-480.jpeg 480w, ../images/photo-4-960.jpeg 960w, ../images/photo-4.jpeg 1440w, ../images/photo-4-1920.jpeg 1920w"
+            sizes="(max-width: 960px) 50vw, 25vw"
+            width="1440" height="1080" loading="lazy"
+            alt="Woolly Mangalitsa hogs rooting along the fence in tall summer grass, with the barn and rolling fields behind them" />
+        </picture>
       </div>
       <div class="photo-strip-item">
-        <img src="../images/photo-16.jpeg" alt="Pigs roaming pasture" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-16-480.webp 480w, ../images/photo-16-960.webp 960w, ../images/photo-16-1440.webp 1440w, ../images/photo-16-1920.webp 1920w"
+            sizes="(max-width: 960px) 50vw, 25vw" />
+          <img src="../images/photo-16.jpeg"
+            srcset="../images/photo-16-480.jpeg 480w, ../images/photo-16-960.jpeg 960w, ../images/photo-16.jpeg 1440w, ../images/photo-16-1920.jpeg 1920w"
+            sizes="(max-width: 960px) 50vw, 25vw"
+            width="1440" height="1080" loading="lazy"
+            alt="Four red hogs grazing across a hillside pasture full of yellow buttercups" />
+        </picture>
       </div>
       <div class="photo-strip-item">
-        <img src="../images/photo-21.jpeg" alt="Piglets feeding" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-21-480.webp 480w, ../images/photo-21-960.webp 960w, ../images/photo-21-1440.webp 1440w"
+            sizes="(max-width: 960px) 50vw, 25vw" />
+          <img src="../images/photo-21.jpeg"
+            srcset="../images/photo-21-480.jpeg 480w, ../images/photo-21-960.jpeg 960w, ../images/photo-21.jpeg 1440w"
+            sizes="(max-width: 960px) 50vw, 25vw"
+            width="1440" height="1920" loading="lazy"
+            alt="A litter of striped piglets crowded shoulder to shoulder in the straw of the barn stall" />
+        </picture>
       </div>
       <div class="photo-strip-item">
-        <img src="../images/photo-23.jpeg" alt="Pigs on Farm" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="../images/photo-23-480.webp 480w, ../images/photo-23-960.webp 960w, ../images/photo-23-1440.webp 1440w"
+            sizes="(max-width: 960px) 50vw, 25vw" />
+          <img src="../images/photo-23.jpeg"
+            srcset="../images/photo-23-480.jpeg 480w, ../images/photo-23-960.jpeg 960w, ../images/photo-23.jpeg 1440w"
+            sizes="(max-width: 960px) 50vw, 25vw"
+            width="1440" height="1920" loading="lazy"
+            alt="Two hogs meeting at the fence line in the evening, one grazing and one looking straight at the camera" />
+        </picture>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section id="cta">
-    <div class="cta-bg" style="background-image:url('../images/photo-18.jpeg');"></div>
+    <div class="cta-bg bg-photo-18"></div>
     <div class="cta-overlay"></div>
     <div class="cta-content">
       <h2 class="reveal">Taste the <em>difference</em><br />real care makes.</h2>

@@ -279,10 +279,15 @@
       place-items: end;
       overflow: hidden;
     }
+    /* <picture> is only a wrapper for the WebP/JPEG choice; take it out of the
+       box tree so every layout rule still applies straight to the <img>. */
+    picture { display: contents; }
+
+    /* The photo itself comes from a .bg-photo-* class on the same element --
+       see the background photos section further down. */
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/photo-24-background.jpeg');
       background-size: cover;
       background-position: center 30%;
       transform: scale(1.04);
@@ -819,12 +824,167 @@
       padding: clamp(6rem, 12vw, 10rem) var(--side);
       overflow: hidden;
     }
+    /* Photo comes from a .bg-photo-* class, same as .hero-bg. */
     .cta-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/photo-6.jpeg');
       background-size: cover;
       background-position: center;
+    }
+
+    /* ── BACKGROUND PHOTOS ─────────────────────────────────────── */
+    /* One class per full-bleed photo, used on .hero-bg and .cta-bg. Each has
+       three background-image lines: a plain URL for browsers with no
+       image-set() support, then the WebP-first versions. A browser uses the
+       last line it understands. Phones get the 960px render further down --
+       these backgrounds always sit under a heavy dark overlay, so there is
+       nothing to gain from sending them a larger file. */
+    .bg-photo-24 {
+      background-image: url('images/photo-24-background-1920.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-24-background-1920.webp') type('image/webp'),
+        url('images/photo-24-background-1920.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-24-background-1920.webp') type('image/webp'),
+        url('images/photo-24-background-1920.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-6 {
+      background-image: url('images/photo-6.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-6-1440.webp') type('image/webp'),
+        url('images/photo-6.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-6-1440.webp') type('image/webp'),
+        url('images/photo-6.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-11 {
+      background-image: url('images/photo-11-1920.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-11-1920.webp') type('image/webp'),
+        url('images/photo-11-1920.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-11-1920.webp') type('image/webp'),
+        url('images/photo-11-1920.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-18 {
+      background-image: url('images/photo-18.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-18-1440.webp') type('image/webp'),
+        url('images/photo-18.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-18-1440.webp') type('image/webp'),
+        url('images/photo-18.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-19 {
+      background-image: url('images/photo-19.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-19-1440.webp') type('image/webp'),
+        url('images/photo-19.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-19-1440.webp') type('image/webp'),
+        url('images/photo-19.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-20 {
+      background-image: url('images/photo-20.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-20-1440.webp') type('image/webp'),
+        url('images/photo-20.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-20-1440.webp') type('image/webp'),
+        url('images/photo-20.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-22 {
+      background-image: url('images/photo-22.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-22-1440.webp') type('image/webp'),
+        url('images/photo-22.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-22-1440.webp') type('image/webp'),
+        url('images/photo-22.jpeg') type('image/jpeg'));
+    }
+    .bg-photo-25 {
+      background-image: url('images/photo-25.jpeg');
+      background-image: -webkit-image-set(
+        url('images/photo-25-1440.webp') type('image/webp'),
+        url('images/photo-25.jpeg') type('image/jpeg'));
+      background-image: image-set(
+        url('images/photo-25-1440.webp') type('image/webp'),
+        url('images/photo-25.jpeg') type('image/jpeg'));
+    }
+
+    @media (max-width: 660px) {
+      .bg-photo-24 {
+        background-image: url('images/photo-24-background-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-24-background-960.webp') type('image/webp'),
+          url('images/photo-24-background-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-24-background-960.webp') type('image/webp'),
+          url('images/photo-24-background-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-6 {
+        background-image: url('images/photo-6-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-6-960.webp') type('image/webp'),
+          url('images/photo-6-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-6-960.webp') type('image/webp'),
+          url('images/photo-6-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-11 {
+        background-image: url('images/photo-11-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-11-960.webp') type('image/webp'),
+          url('images/photo-11-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-11-960.webp') type('image/webp'),
+          url('images/photo-11-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-18 {
+        background-image: url('images/photo-18-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-18-960.webp') type('image/webp'),
+          url('images/photo-18-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-18-960.webp') type('image/webp'),
+          url('images/photo-18-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-19 {
+        background-image: url('images/photo-19-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-19-960.webp') type('image/webp'),
+          url('images/photo-19-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-19-960.webp') type('image/webp'),
+          url('images/photo-19-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-20 {
+        background-image: url('images/photo-20-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-20-960.webp') type('image/webp'),
+          url('images/photo-20-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-20-960.webp') type('image/webp'),
+          url('images/photo-20-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-22 {
+        background-image: url('images/photo-22-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-22-960.webp') type('image/webp'),
+          url('images/photo-22-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-22-960.webp') type('image/webp'),
+          url('images/photo-22-960.jpeg') type('image/jpeg'));
+      }
+      .bg-photo-25 {
+        background-image: url('images/photo-25-960.jpeg');
+        background-image: -webkit-image-set(
+          url('images/photo-25-960.webp') type('image/webp'),
+          url('images/photo-25-960.jpeg') type('image/jpeg'));
+        background-image: image-set(
+          url('images/photo-25-960.webp') type('image/webp'),
+          url('images/photo-25-960.jpeg') type('image/jpeg'));
+      }
     }
     .cta-overlay {
       position: absolute;

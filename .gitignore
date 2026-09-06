@@ -10,3 +10,6 @@ npm-debug.log*
 # OS cruft
 .DS_Store
 Thumbs.db
+
+# Screenshots from tools/e2e-check.mjs -- regenerated on every run.
+tools/.e2e-shots/

@@ -1,0 +1,2230 @@
+{
+  "photos": {
+    "photo-1": {
+      "stem": "photo-1",
+      "srcWidth": 5712,
+      "srcHeight": 4284,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-1-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 51440,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-1-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 45936,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-1-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 193486,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-1-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 176984,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-1-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 353906,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-1.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 392616,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-1-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 346944,
+          "quality": 74,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-1-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 365175,
+          "quality": 70,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-10": {
+      "stem": "photo-10",
+      "srcWidth": 4284,
+      "srcHeight": 5712,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-10-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 52144,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-10-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 57641,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-10-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 137676,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-10-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 171297,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-10-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 242884,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-10.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 321844,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-11": {
+      "stem": "photo-11",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-11-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 58480,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-11-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 49651,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-11-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 193094,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-11-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 178405,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-11-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 328180,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-11.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 342146,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-11-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 367930,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-11-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 381031,
+          "quality": 70,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-12": {
+      "stem": "photo-12",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-12-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 46794,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-12-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 52046,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-12-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 172496,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-12-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 193417,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-12-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 352732,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-12.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 331933,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-13": {
+      "stem": "photo-13",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-13-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 20868,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-13-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 30813,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-13-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 50122,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-13-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 83239,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-13-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 83756,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-13.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 149496,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-14": {
+      "stem": "photo-14",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-14-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 37950,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-14-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 45773,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-14-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 109800,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-14-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 138874,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-14-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 206126,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-14.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 269670,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-15": {
+      "stem": "photo-15",
+      "srcWidth": 1284,
+      "srcHeight": 1698,
+      "baseWidth": 1284,
+      "outputs": [
+        {
+          "file": "images/photo-15-480.webp",
+          "width": 480,
+          "height": 635,
+          "bytes": 107824,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-15-480.jpeg",
+          "width": 480,
+          "height": 635,
+          "bytes": 95643,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-15-960.webp",
+          "width": 960,
+          "height": 1270,
+          "bytes": 262520,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-15-960.jpeg",
+          "width": 960,
+          "height": 1270,
+          "bytes": 279523,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-15-1284.webp",
+          "width": 1284,
+          "height": 1698,
+          "bytes": 397188,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1284,
+          "base": false
+        },
+        {
+          "file": "images/photo-15.jpeg",
+          "width": 1284,
+          "height": 1698,
+          "bytes": 358585,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1284,
+          "base": true
+        }
+      ]
+    },
+    "photo-16": {
+      "stem": "photo-16",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-16-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 57734,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-16-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 46442,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-16-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 233416,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-16-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 196061,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-16-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 387138,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-16.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 349044,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-16-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 387076,
+          "quality": 74,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-16-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 384326,
+          "quality": 70,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-17": {
+      "stem": "photo-17",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-17-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 39800,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-17-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 40121,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-17-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 141644,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-17-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 147038,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-17-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 289600,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-17.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 309326,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-17-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 356532,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-17-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 361685,
+          "quality": 70,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-18": {
+      "stem": "photo-18",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-18-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 106794,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-18-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 93907,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-18-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 347736,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-18-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 370807,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-18-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 384728,
+          "quality": 62,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-18.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 392108,
+          "quality": 64,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-19": {
+      "stem": "photo-19",
+      "srcWidth": 2316,
+      "srcHeight": 3088,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-19-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 27650,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-19-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 37801,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-19-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 68416,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-19-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 107230,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-19-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 125644,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-19.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 205819,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-2": {
+      "stem": "photo-2",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-2-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 56824,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-2-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 50504,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-2-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 235062,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-2-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 208713,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-2-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 302964,
+          "quality": 80,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-2.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 351563,
+          "quality": 70,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-2-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 389156,
+          "quality": 62,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-2-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 391747,
+          "quality": 64,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-20": {
+      "stem": "photo-20",
+      "srcWidth": 2316,
+      "srcHeight": 3088,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-20-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 18736,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-20-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 30066,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-20-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 43688,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-20-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 78780,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-20-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 73036,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-20.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 140860,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-21": {
+      "stem": "photo-21",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-21-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 105880,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-21-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 92553,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-21-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 367444,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-21-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 341889,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-21-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 378768,
+          "quality": 74,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-21.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 359966,
+          "quality": 64,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-22": {
+      "stem": "photo-22",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-22-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 75128,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-22-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 70811,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-22-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 275330,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-22-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 268092,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-22-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 396508,
+          "quality": 62,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-22.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 364157,
+          "quality": 64,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-23": {
+      "stem": "photo-23",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-23-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 93262,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-23-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 85260,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-23-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 312376,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-23-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 304613,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-23-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 398442,
+          "quality": 80,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-23.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 380268,
+          "quality": 60,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-24-background": {
+      "stem": "photo-24-background",
+      "srcWidth": 4032,
+      "srcHeight": 1997,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-24-background-480.webp",
+          "width": 480,
+          "height": 238,
+          "bytes": 10464,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background-480.jpeg",
+          "width": 480,
+          "height": 238,
+          "bytes": 13839,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background-960.webp",
+          "width": 960,
+          "height": 475,
+          "bytes": 30532,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background-960.jpeg",
+          "width": 960,
+          "height": 475,
+          "bytes": 41522,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background-1440.webp",
+          "width": 1440,
+          "height": 713,
+          "bytes": 54750,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background.jpeg",
+          "width": 1440,
+          "height": 713,
+          "bytes": 78855,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-24-background-1920.webp",
+          "width": 1920,
+          "height": 951,
+          "bytes": 82980,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-24-background-1920.jpeg",
+          "width": 1920,
+          "height": 951,
+          "bytes": 122891,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-25": {
+      "stem": "photo-25",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-25-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 103966,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-25-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 89001,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-25-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 360546,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-25-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 370384,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-25-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 389486,
+          "quality": 62,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-25.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 388937,
+          "quality": 64,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-26": {
+      "stem": "photo-26",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-26-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 28086,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-26-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 36323,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-26-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 75982,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-26-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 108250,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-26-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 133860,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-26.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 207954,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-27": {
+      "stem": "photo-27",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-27-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 104846,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-27-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 94858,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-27-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 300190,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-27-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 312845,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-27-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 376386,
+          "quality": 62,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-27.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 396412,
+          "quality": 64,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-3": {
+      "stem": "photo-3",
+      "srcWidth": 5712,
+      "srcHeight": 4284,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-3-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 33498,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-3-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 34841,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-3-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 124720,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-3-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 127107,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-3-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 283818,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-3.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 284345,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-3-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 371418,
+          "quality": 68,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-3-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 352675,
+          "quality": 70,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-4": {
+      "stem": "photo-4",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-4-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 57314,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-4-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 48708,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-4-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 232468,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-4-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 200754,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-4-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 378498,
+          "quality": 62,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-4.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 377070,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-4-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 378238,
+          "quality": 68,
+          "denoise": 0.8,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-4-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 366632,
+          "quality": 64,
+          "denoise": 0.8,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-5": {
+      "stem": "photo-5",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-5-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 73932,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-5-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 72668,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-5-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 240874,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-5-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 253409,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-5-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 362878,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-5.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 361187,
+          "quality": 70,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-6": {
+      "stem": "photo-6",
+      "srcWidth": 4284,
+      "srcHeight": 5712,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-6-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 27330,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-6-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 37696,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-6-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 73202,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-6-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 110793,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-6-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 126364,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-6.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 204005,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-7": {
+      "stem": "photo-7",
+      "srcWidth": 3024,
+      "srcHeight": 4032,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-7-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 46688,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-7-480.jpeg",
+          "width": 480,
+          "height": 640,
+          "bytes": 51151,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-7-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 154348,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-7-960.jpeg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 174810,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-7-1440.webp",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 300836,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-7.jpeg",
+          "width": 1440,
+          "height": 1920,
+          "bytes": 353450,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        }
+      ]
+    },
+    "photo-8": {
+      "stem": "photo-8",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-8-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 31484,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-8-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 30671,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-8-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 124318,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-8-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 121284,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-8-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 263204,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-8.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 265149,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-8-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 340248,
+          "quality": 74,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-8-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 362732,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    },
+    "photo-9": {
+      "stem": "photo-9",
+      "srcWidth": 4032,
+      "srcHeight": 3024,
+      "baseWidth": 1440,
+      "outputs": [
+        {
+          "file": "images/photo-9-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 52560,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-9-480.jpeg",
+          "width": 480,
+          "height": 360,
+          "bytes": 46326,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 480,
+          "base": false
+        },
+        {
+          "file": "images/photo-9-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 155194,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-9-960.jpeg",
+          "width": 960,
+          "height": 720,
+          "bytes": 153969,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 960,
+          "base": false
+        },
+        {
+          "file": "images/photo-9-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 263966,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1440,
+          "base": false
+        },
+        {
+          "file": "images/photo-9.jpeg",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 287916,
+          "quality": 82,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1440,
+          "base": true
+        },
+        {
+          "file": "images/photo-9-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 379728,
+          "quality": 80,
+          "denoise": 0,
+          "format": "webp",
+          "requestedWidth": 1920,
+          "base": false
+        },
+        {
+          "file": "images/photo-9-1920.jpeg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 368907,
+          "quality": 76,
+          "denoise": 0,
+          "format": "jpeg",
+          "requestedWidth": 1920,
+          "base": false
+        }
+      ]
+    }
+  },
+  "logos": {
+    "LBF-logo-transparent.png": {
+      "file": "images/LBF-logo-transparent.png",
+      "width": 192,
+      "height": 192,
+      "bytes": 9356
+    }
+  }
+}

@@ -349,7 +349,7 @@
 
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-bg bg-photo-24" id="heroBg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Kentucky Proud Since 2022</p>
@@ -400,12 +400,28 @@
   <section id="story">
     <div class="story-inner">
       <div class="story-images reveal">
-        <img class="story-img-main"
-          src="images/photo-3.jpeg"
-          alt="Long Branch Farms animals on pasture" />
-        <img class="story-img-accent"
-          src="images/photo-7.jpeg"
-          alt="Farm life at Long Branch Farms" />
+        <picture>
+          <source type="image/webp"
+            srcset="images/photo-3-480.webp 480w, images/photo-3-960.webp 960w, images/photo-3-1440.webp 1440w, images/photo-3-1920.webp 1920w"
+            sizes="(max-width: 960px) 68vw, 410px" />
+          <img class="story-img-main"
+            src="images/photo-3.jpeg"
+            srcset="images/photo-3-480.jpeg 480w, images/photo-3-960.jpeg 960w, images/photo-3.jpeg 1440w, images/photo-3-1920.jpeg 1920w"
+            sizes="(max-width: 960px) 68vw, 410px"
+            width="1440" height="1080"
+            alt="Cattle crowded along a feed line in the snow while a small child in a hooded snowsuit watches from behind the fence" />
+        </picture>
+        <picture>
+          <source type="image/webp"
+            srcset="images/photo-7-480.webp 480w, images/photo-7-960.webp 960w, images/photo-7-1440.webp 1440w"
+            sizes="(max-width: 960px) 50vw, 300px" />
+          <img class="story-img-accent"
+            src="images/photo-7.jpeg"
+            srcset="images/photo-7-480.jpeg 480w, images/photo-7-960.jpeg 960w, images/photo-7.jpeg 1440w"
+            sizes="(max-width: 960px) 50vw, 300px"
+            width="1440" height="1920"
+            alt="A boy in an orange cap riding an antique Allis-Chalmers tractor with his mom at a fall tractor show" />
+        </picture>
         <span class="story-img-tag">Est. 2022</span>
       </div>
       <div class="story-text">
@@ -444,16 +460,52 @@
   <!-- Photo Strip -->
   <div class="photo-strip">
     <div class="photo-strip-item">
-      <img src="images/photo-1.jpeg" alt="Farm photo" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-1-480.webp 480w, images/photo-1-960.webp 960w, images/photo-1-1440.webp 1440w, images/photo-1-1920.webp 1920w"
+          sizes="(max-width: 960px) 50vw, 25vw" />
+        <img src="images/photo-1.jpeg"
+          srcset="images/photo-1-480.jpeg 480w, images/photo-1-960.jpeg 960w, images/photo-1.jpeg 1440w, images/photo-1-1920.jpeg 1920w"
+          sizes="(max-width: 960px) 50vw, 25vw"
+          width="1440" height="1080" loading="lazy"
+          alt="A white-faced cow and her calf standing with the black cattle herd on a foggy winter pasture" />
+      </picture>
     </div>
     <div class="photo-strip-item">
-      <img src="images/photo-8.jpeg" alt="Farm photo" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-8-480.webp 480w, images/photo-8-960.webp 960w, images/photo-8-1440.webp 1440w, images/photo-8-1920.webp 1920w"
+          sizes="(max-width: 960px) 50vw, 25vw" />
+        <img src="images/photo-8.jpeg"
+          srcset="images/photo-8-480.jpeg 480w, images/photo-8-960.jpeg 960w, images/photo-8.jpeg 1440w, images/photo-8-1920.jpeg 1920w"
+          sizes="(max-width: 960px) 50vw, 25vw"
+          width="1440" height="1080" loading="lazy"
+          alt="A farmer carrying a newborn white calf in from the pasture at sunset" />
+      </picture>
     </div>
     <div class="photo-strip-item">
-      <img src="images/photo-12.jpeg" alt="Farm photo" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-12-480.webp 480w, images/photo-12-960.webp 960w, images/photo-12-1440.webp 1440w"
+          sizes="(max-width: 960px) 50vw, 25vw" />
+        <img src="images/photo-12.jpeg"
+          srcset="images/photo-12-480.jpeg 480w, images/photo-12-960.jpeg 960w, images/photo-12.jpeg 1440w"
+          sizes="(max-width: 960px) 50vw, 25vw"
+          width="1440" height="1920" loading="lazy"
+          alt="A Jersey cow leaning over her feed bucket in the barn, wearing a gray cowboy hat someone set on her head" />
+      </picture>
     </div>
     <div class="photo-strip-item">
-      <img src="images/photo-15.jpeg" alt="Farm photo" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-15-480.webp 480w, images/photo-15-960.webp 960w, images/photo-15-1284.webp 1284w"
+          sizes="(max-width: 960px) 50vw, 25vw" />
+        <img src="images/photo-15.jpeg"
+          srcset="images/photo-15-480.jpeg 480w, images/photo-15-960.jpeg 960w, images/photo-15.jpeg 1284w"
+          sizes="(max-width: 960px) 50vw, 25vw"
+          width="1284" height="1698" loading="lazy"
+          alt="A white calf grazing in winter grass while a child in canvas coveralls reaches down to scratch its head" />
+      </picture>
     </div>
   </div>
 
@@ -610,19 +662,55 @@
   <!-- Feature Photo Grid -->
   <div class="feature-grid">
     <div class="fg-item fg-item-tall">
-      <img src="images/photo-2.jpeg" alt="Farm animals" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-2-480.webp 480w, images/photo-2-960.webp 960w, images/photo-2-1440.webp 1440w, images/photo-2-1920.webp 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+        <img src="images/photo-2.jpeg"
+          srcset="images/photo-2-480.jpeg 480w, images/photo-2-960.jpeg 960w, images/photo-2.jpeg 1440w, images/photo-2-1920.jpeg 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+          width="1440" height="1080" loading="lazy"
+          alt="Sheep, hogs and a dairy cow sharing a feeder along the fence line on a clear fall evening" />
+      </picture>
       <span class="fg-caption">Pasture Life</span>
     </div>
     <div class="fg-item fg-item-wide fg-item-sm">
-      <img src="images/photo-9.jpeg" alt="Farm scenery" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-9-480.webp 480w, images/photo-9-960.webp 960w, images/photo-9-1440.webp 1440w, images/photo-9-1920.webp 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw" />
+        <img src="images/photo-9.jpeg"
+          srcset="images/photo-9-480.jpeg 480w, images/photo-9-960.jpeg 960w, images/photo-9.jpeg 1440w, images/photo-9-1920.jpeg 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw"
+          width="1440" height="1080" loading="lazy"
+          alt="A black cow standing over her white newborn calf in the pasture" />
+      </picture>
       <span class="fg-caption">Long Branch Land</span>
     </div>
     <div class="fg-item fg-item-sm">
-      <img src="images/photo-11.jpeg" alt="Farm animals" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-11-480.webp 480w, images/photo-11-960.webp 960w, images/photo-11-1440.webp 1440w, images/photo-11-1920.webp 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+        <img src="images/photo-11.jpeg"
+          srcset="images/photo-11-480.jpeg 480w, images/photo-11-960.jpeg 960w, images/photo-11.jpeg 1440w, images/photo-11-1920.jpeg 1920w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+          width="1440" height="1080" loading="lazy"
+          alt="Bush-hogging tall grass on an old tractor at the edge of the tree line" />
+      </picture>
       <span class="fg-caption">Raised Naturally</span>
     </div>
     <div class="fg-item fg-item-sm">
-      <img src="images/photo-13.jpeg" alt="Farm life" loading="lazy" />
+      <picture>
+        <source type="image/webp"
+          srcset="images/photo-13-480.webp 480w, images/photo-13-960.webp 960w, images/photo-13-1440.webp 1440w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
+        <img src="images/photo-13.jpeg"
+          srcset="images/photo-13-480.jpeg 480w, images/photo-13-960.jpeg 960w, images/photo-13.jpeg 1440w"
+          sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
+          width="1440" height="1920" loading="lazy"
+          alt="A Jersey cow stretching her nose out for a scratch on the muzzle" />
+      </picture>
       <span class="fg-caption">Every Day</span>
     </div>
   </div>
@@ -653,7 +741,16 @@
         </ul>
       </div>
       <div class="promise-image reveal" style="transition-delay:.1s">
-        <img src="images/photo-5.jpeg" alt="Long Branch Farms animals on pasture" loading="lazy" />
+        <picture>
+          <source type="image/webp"
+            srcset="images/photo-5-480.webp 480w, images/photo-5-960.webp 960w, images/photo-5-1440.webp 1440w"
+            sizes="(max-width: 960px) 90vw, 545px" />
+          <img src="images/photo-5.jpeg"
+            srcset="images/photo-5-480.jpeg 480w, images/photo-5-960.jpeg 960w, images/photo-5.jpeg 1440w"
+            sizes="(max-width: 960px) 90vw, 545px"
+            width="1440" height="1920" loading="lazy"
+            alt="The farm's six-year-old grinning as he carries one of the ducks across the barn lot" />
+        </picture>
         <span class="promise-image-tag">Naturally Raised</span>
       </div>
     </div>
@@ -670,7 +767,7 @@
 
   <!-- CTA -->
   <section id="cta">
-    <div class="cta-bg"></div>
+    <div class="cta-bg bg-photo-6"></div>
     <div class="cta-overlay"></div>
     <div class="cta-content">
       <h2 class="reveal">Ready to fill your <em>freezer</em><br />the right way?</h2>
