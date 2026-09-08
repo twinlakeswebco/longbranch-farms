@@ -565,7 +565,7 @@
     <button class="lightbox-control lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     <button class="lightbox-control lightbox-prev" id="lightboxPrev" type="button" aria-label="Show previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
     <figure class="lightbox-figure">
-      <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+      <img class="lightbox-image" id="lightboxImage" alt="" />
       <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
     </figure>
     <button class="lightbox-control lightbox-next" id="lightboxNext" type="button" aria-label="Show next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -791,7 +791,7 @@
     lightboxNext.addEventListener('click', () => showPhoto(activePhoto + 1));
     lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
     lightbox.addEventListener('close', () => {
-      lightboxImage.src = '';
+      lightboxImage.removeAttribute('src');
       if (lightboxReturnFocus) lightboxReturnFocus.focus();
       lightboxReturnFocus = null;
     });
