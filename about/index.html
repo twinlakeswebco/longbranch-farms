@@ -125,6 +125,262 @@
     #about-gallery {
       padding: 0 0 clamp(5rem, 10vw, 9rem);
       background: var(--cream);
+      overflow: hidden;
+    }
+    .gallery-heading {
+      max-width: var(--max-w);
+      margin: 0 auto 1.75rem;
+      padding: 0 var(--side);
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .gallery-heading h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      color: var(--soil);
+    }
+    .gallery-heading p {
+      max-width: 31ch;
+      color: #6a5a3a;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      text-align: right;
+    }
+    .gallery-shell {
+      position: relative;
+    }
+    .scroll-gallery {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: var(--side);
+      overscroll-behavior-inline: contain;
+      padding: 0 var(--side) 1.1rem;
+      scrollbar-color: var(--hay) rgba(46,32,16,0.14);
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scroll-gallery::-webkit-scrollbar { height: 7px; }
+    .scroll-gallery::-webkit-scrollbar-track { background: rgba(46,32,16,0.12); }
+    .scroll-gallery::-webkit-scrollbar-thumb { background: var(--hay); }
+    .gallery-item {
+      position: relative;
+      flex: 0 0 clamp(270px, 34vw, 460px);
+      aspect-ratio: 4 / 3;
+      scroll-snap-align: start;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      background: var(--bark);
+      color: var(--cream);
+      cursor: zoom-in;
+      text-align: left;
+      font: inherit;
+    }
+    .gallery-item picture,
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .gallery-item img {
+      object-fit: cover;
+      transition: transform 0.65s var(--ease), filter 0.4s var(--ease);
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,8,3,0.82), transparent 55%);
+      transition: background var(--dur) var(--ease);
+      pointer-events: none;
+    }
+    .gallery-caption {
+      position: absolute;
+      z-index: 2;
+      left: 1.1rem;
+      right: 1.1rem;
+      bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--hay-lt);
+      pointer-events: none;
+    }
+    .gallery-zoom {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--cream);
+      letter-spacing: 0.08em;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+    }
+    .gallery-zoom svg {
+      width: 1rem;
+      height: 1rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .gallery-item:hover img,
+    .gallery-item:focus-visible img {
+      transform: scale(1.045);
+      filter: brightness(0.78);
+    }
+    .gallery-item:hover .gallery-zoom,
+    .gallery-item:focus-visible .gallery-zoom {
+      opacity: 1;
+      transform: none;
+    }
+    .gallery-item:focus-visible {
+      outline: 3px solid var(--hay);
+      outline-offset: -3px;
+    }
+    .gallery-controls {
+      max-width: var(--max-w);
+      margin: 1rem auto 0;
+      padding: 0 var(--side);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .gallery-count {
+      color: #6a5a3a;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .gallery-arrows { display: flex; gap: 0.5rem; }
+    .gallery-arrow,
+    .lightbox-control {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(59,74,47,0.32);
+      background: transparent;
+      color: var(--moss);
+      cursor: pointer;
+      transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+    }
+    .gallery-arrow:hover,
+    .gallery-arrow:focus-visible {
+      background: var(--moss);
+      border-color: var(--moss);
+      color: var(--cream);
+    }
+    .gallery-arrow svg,
+    .lightbox-control svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .gallery-lightbox {
+      width: 100vw;
+      max-width: none;
+      height: 100vh;
+      max-height: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: rgba(10,8,3,0.96);
+      color: var(--cream);
+    }
+    .gallery-lightbox::backdrop { background: rgba(10,8,3,0.88); }
+    .gallery-lightbox[open] {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-rows: 1fr auto;
+      align-items: center;
+      gap: clamp(0.5rem, 2vw, 1.5rem);
+      padding: clamp(0.75rem, 2.5vw, 2rem);
+    }
+    .lightbox-figure {
+      grid-column: 2;
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      place-items: center;
+      align-self: stretch;
+    }
+    .lightbox-image {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: calc(100vh - 8rem);
+      object-fit: contain;
+      box-shadow: 0 20px 65px rgba(0,0,0,0.5);
+    }
+    .lightbox-caption {
+      padding-top: 0.8rem;
+      color: rgba(245,240,232,0.72);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: clamp(0.75rem, 2vw, 1.5rem);
+      right: clamp(0.75rem, 2vw, 1.5rem);
+      z-index: 2;
+    }
+    .lightbox-control {
+      border-color: rgba(245,240,232,0.3);
+      color: var(--cream);
+    }
+    .lightbox-control:hover,
+    .lightbox-control:focus-visible {
+      background: var(--hay);
+      border-color: var(--hay);
+      color: var(--soil);
+    }
+    .lightbox-prev { grid-column: 1; grid-row: 1; }
+    .lightbox-next { grid-column: 3; grid-row: 1; }
+    .lightbox-status {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      color: rgba(245,240,232,0.55);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    @media (max-width: 660px) {
+      .gallery-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+      .gallery-heading p { text-align: left; }
+      .gallery-item { flex-basis: min(82vw, 360px); }
+      .gallery-zoom { opacity: 1; transform: none; }
+      .gallery-lightbox[open] {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr) auto auto;
+        gap: 0.75rem;
+        padding: 4rem 0.75rem 1rem;
+      }
+      .lightbox-figure { grid-column: 1 / -1; grid-row: 1; }
+      .lightbox-image { max-height: calc(100vh - 11rem); }
+      .lightbox-prev { grid-column: 1; grid-row: 2; justify-self: end; }
+      .lightbox-next { grid-column: 2; grid-row: 2; justify-self: start; }
+      .lightbox-status { grid-row: 3; }
     }
   </style>
 </head>
@@ -231,112 +487,90 @@
   </section>
 
   <!-- Gallery -->
-  <section id="about-gallery">
-    <div class="feature-grid">
-      <div class="fg-item fg-item-tall">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-17-480.webp 480w, ../images/photo-17-960.webp 960w, ../images/photo-17-1440.webp 1440w, ../images/photo-17-1920.webp 1920w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
-          <img src="../images/photo-17.jpeg"
-            srcset="../images/photo-17-480.jpeg 480w, ../images/photo-17-960.jpeg 960w, ../images/photo-17.jpeg 1440w, ../images/photo-17-1920.jpeg 1920w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
-            width="1440" height="1080" loading="lazy"
-            alt="Two Jersey milk cows in their barn stalls, looking out through the open gate at the pasture" />
-        </picture>
-        <span class="fg-caption">Open Pasture</span>
-      </div>
-      <div class="fg-item fg-item-wide fg-item-sm">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-10-480.webp 480w, ../images/photo-10-960.webp 960w, ../images/photo-10-1440.webp 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw" />
-          <img src="../images/photo-10.jpeg"
-            srcset="../images/photo-10-480.jpeg 480w, ../images/photo-10-960.jpeg 960w, ../images/photo-10.jpeg 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 66vw"
-            width="1440" height="1920" loading="lazy"
-            alt="A white calf with black ears standing close to a farmer kneeling at the fence, its mother watching alongside" />
-        </picture>
-        <span class="fg-caption">Daily Chores</span>
-      </div>
-      <div class="fg-item fg-item-sm">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-14-480.webp 480w, ../images/photo-14-960.webp 960w, ../images/photo-14-1440.webp 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
-          <img src="../images/photo-14.jpeg"
-            srcset="../images/photo-14-480.jpeg 480w, ../images/photo-14-960.jpeg 960w, ../images/photo-14.jpeg 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
-            width="1440" height="1920" loading="lazy"
-            alt="A newborn calf dozing in fresh straw with a hand cupped under its chin" />
-        </picture>
-        <span class="fg-caption">The Herd</span>
-      </div>
-      <div class="fg-item fg-item-sm">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-19-480.webp 480w, ../images/photo-19-960.webp 960w, ../images/photo-19-1440.webp 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw" />
-          <img src="../images/photo-19.jpeg"
-            srcset="../images/photo-19-480.jpeg 480w, ../images/photo-19-960.jpeg 960w, ../images/photo-19.jpeg 1440w"
-            sizes="(max-width: 660px) 100vw, (max-width: 960px) 50vw, 33vw"
-            width="1440" height="1920" loading="lazy"
-            alt="A young child hugging a brown dairy cow in a pasture at sunset" />
-        </picture>
-        <span class="fg-caption">Grayson County</span>
-      </div>
+  <section id="about-gallery" aria-labelledby="gallery-title">
+    <div class="gallery-heading">
+      <h2 id="gallery-title">Life on the farm</h2>
+      <p>Scroll or use the arrows to explore. Select any photo to enlarge it.</p>
     </div>
-    <div class="photo-strip" style="margin-top:6px;">
-      <div class="photo-strip-item">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-4-480.webp 480w, ../images/photo-4-960.webp 960w, ../images/photo-4-1440.webp 1440w, ../images/photo-4-1920.webp 1920w"
-            sizes="(max-width: 960px) 50vw, 25vw" />
-          <img src="../images/photo-4.jpeg"
-            srcset="../images/photo-4-480.jpeg 480w, ../images/photo-4-960.jpeg 960w, ../images/photo-4.jpeg 1440w, ../images/photo-4-1920.jpeg 1920w"
-            sizes="(max-width: 960px) 50vw, 25vw"
-            width="1440" height="1080" loading="lazy"
-            alt="Woolly Mangalitsa hogs rooting along the fence in tall summer grass, with the barn and rolling fields behind them" />
-        </picture>
+    <div class="gallery-shell">
+      <div class="scroll-gallery" id="farmGallery" role="region" aria-label="Long Branch Farms photo gallery" tabindex="0">
+        <button class="gallery-item" type="button" data-full="../images/photo-17.jpeg" aria-label="Enlarge photo: Open Pasture">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-17-480.webp 480w, ../images/photo-17-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-17.jpeg" srcset="../images/photo-17-480.jpeg 480w, ../images/photo-17-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Two Jersey milk cows in their barn stalls, looking out through the open gate at the pasture" />
+          </picture>
+          <span class="gallery-caption"><span>Open Pasture</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-10.jpeg" aria-label="Enlarge photo: Daily Chores">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-10-480.webp 480w, ../images/photo-10-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-10.jpeg" srcset="../images/photo-10-480.jpeg 480w, ../images/photo-10-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A white calf with black ears standing close to a farmer kneeling at the fence, its mother watching alongside" />
+          </picture>
+          <span class="gallery-caption"><span>Daily Chores</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-14.jpeg" aria-label="Enlarge photo: The Herd">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-14-480.webp 480w, ../images/photo-14-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-14.jpeg" srcset="../images/photo-14-480.jpeg 480w, ../images/photo-14-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A newborn calf dozing in fresh straw with a hand cupped under its chin" />
+          </picture>
+          <span class="gallery-caption"><span>The Herd</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-19.jpeg" aria-label="Enlarge photo: Grayson County">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-19-480.webp 480w, ../images/photo-19-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-19.jpeg" srcset="../images/photo-19-480.jpeg 480w, ../images/photo-19-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A young child hugging a brown dairy cow in a pasture at sunset" />
+          </picture>
+          <span class="gallery-caption"><span>Grayson County</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-4.jpeg" aria-label="Enlarge photo: Mangalitsa Hogs">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-4-480.webp 480w, ../images/photo-4-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-4.jpeg" srcset="../images/photo-4-480.jpeg 480w, ../images/photo-4-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Woolly Mangalitsa hogs rooting along the fence in tall summer grass, with the barn and rolling fields behind them" />
+          </picture>
+          <span class="gallery-caption"><span>Mangalitsa Hogs</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-16.jpeg" aria-label="Enlarge photo: Pasture Raised">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-16-480.webp 480w, ../images/photo-16-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-16.jpeg" srcset="../images/photo-16-480.jpeg 480w, ../images/photo-16-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Four red hogs grazing across a hillside pasture full of yellow buttercups" />
+          </picture>
+          <span class="gallery-caption"><span>Pasture Raised</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-21.jpeg" aria-label="Enlarge photo: New Arrivals">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-21-480.webp 480w, ../images/photo-21-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-21.jpeg" srcset="../images/photo-21-480.jpeg 480w, ../images/photo-21-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A litter of striped piglets crowded shoulder to shoulder in the straw of the barn stall" />
+          </picture>
+          <span class="gallery-caption"><span>New Arrivals</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="../images/photo-23.jpeg" aria-label="Enlarge photo: Evening Rounds">
+          <picture>
+            <source type="image/webp" srcset="../images/photo-23-480.webp 480w, ../images/photo-23-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
+            <img src="../images/photo-23.jpeg" srcset="../images/photo-23-480.jpeg 480w, ../images/photo-23-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="Two hogs meeting at the fence line in the evening, one grazing and one looking straight at the camera" />
+          </picture>
+          <span class="gallery-caption"><span>Evening Rounds</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </button>
       </div>
-      <div class="photo-strip-item">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-16-480.webp 480w, ../images/photo-16-960.webp 960w, ../images/photo-16-1440.webp 1440w, ../images/photo-16-1920.webp 1920w"
-            sizes="(max-width: 960px) 50vw, 25vw" />
-          <img src="../images/photo-16.jpeg"
-            srcset="../images/photo-16-480.jpeg 480w, ../images/photo-16-960.jpeg 960w, ../images/photo-16.jpeg 1440w, ../images/photo-16-1920.jpeg 1920w"
-            sizes="(max-width: 960px) 50vw, 25vw"
-            width="1440" height="1080" loading="lazy"
-            alt="Four red hogs grazing across a hillside pasture full of yellow buttercups" />
-        </picture>
-      </div>
-      <div class="photo-strip-item">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-21-480.webp 480w, ../images/photo-21-960.webp 960w, ../images/photo-21-1440.webp 1440w"
-            sizes="(max-width: 960px) 50vw, 25vw" />
-          <img src="../images/photo-21.jpeg"
-            srcset="../images/photo-21-480.jpeg 480w, ../images/photo-21-960.jpeg 960w, ../images/photo-21.jpeg 1440w"
-            sizes="(max-width: 960px) 50vw, 25vw"
-            width="1440" height="1920" loading="lazy"
-            alt="A litter of striped piglets crowded shoulder to shoulder in the straw of the barn stall" />
-        </picture>
-      </div>
-      <div class="photo-strip-item">
-        <picture>
-          <source type="image/webp"
-            srcset="../images/photo-23-480.webp 480w, ../images/photo-23-960.webp 960w, ../images/photo-23-1440.webp 1440w"
-            sizes="(max-width: 960px) 50vw, 25vw" />
-          <img src="../images/photo-23.jpeg"
-            srcset="../images/photo-23-480.jpeg 480w, ../images/photo-23-960.jpeg 960w, ../images/photo-23.jpeg 1440w"
-            sizes="(max-width: 960px) 50vw, 25vw"
-            width="1440" height="1920" loading="lazy"
-            alt="Two hogs meeting at the fence line in the evening, one grazing and one looking straight at the camera" />
-        </picture>
+      <div class="gallery-controls">
+        <span class="gallery-count">8 farm photos</span>
+        <div class="gallery-arrows">
+          <button class="gallery-arrow" id="galleryPrev" type="button" aria-label="Scroll to previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="gallery-arrow" id="galleryNext" type="button" aria-label="Scroll to next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
       </div>
     </div>
   </section>
+
+  <dialog class="gallery-lightbox" id="galleryLightbox" aria-label="Enlarged farm photo">
+    <button class="lightbox-control lightbox-close" id="lightboxClose" type="button" aria-label="Close enlarged photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button class="lightbox-control lightbox-prev" id="lightboxPrev" type="button" aria-label="Show previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+      <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-control lightbox-next" id="lightboxNext" type="button" aria-label="Show next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <p class="lightbox-status" id="lightboxStatus" aria-live="polite"></p>
+  </dialog>
 
   <!-- CTA -->
   <section id="cta">
@@ -497,6 +731,74 @@
       // Signals to that failsafe that the reveal machinery is live.
       document.documentElement.setAttribute('data-reveal-observer', 'on');
     }
+
+    // Scrollable photo gallery and full-size viewer
+    const gallery = document.getElementById('farmGallery');
+    const galleryItems = Array.from(gallery.querySelectorAll('.gallery-item'));
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxStatus = document.getElementById('lightboxStatus');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    let activePhoto = 0;
+    let lightboxReturnFocus = null;
+
+    function scrollGallery(direction) {
+      const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+      const distance = galleryItems[0].getBoundingClientRect().width + gap;
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      gallery.scrollBy({ left: direction * distance, behavior: behavior });
+    }
+
+    gallery.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); scrollGallery(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); scrollGallery(1); }
+    });
+    galleryPrev.addEventListener('click', () => scrollGallery(-1));
+    galleryNext.addEventListener('click', () => scrollGallery(1));
+
+    function showPhoto(index) {
+      activePhoto = (index + galleryItems.length) % galleryItems.length;
+      const item = galleryItems[activePhoto];
+      const thumb = item.querySelector('img');
+      const title = item.querySelector('.gallery-caption > span:first-child').textContent;
+      lightboxImage.src = item.dataset.full;
+      lightboxImage.alt = thumb.alt;
+      lightboxCaption.textContent = title + ': ' + thumb.alt;
+      lightboxStatus.textContent = 'Photo ' + (activePhoto + 1) + ' of ' + galleryItems.length;
+    }
+
+    function openLightbox(index) {
+      lightboxReturnFocus = galleryItems[index];
+      showPhoto(index);
+      if (typeof lightbox.showModal === 'function') lightbox.showModal();
+      else lightbox.setAttribute('open', '');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (typeof lightbox.close === 'function') lightbox.close();
+      else lightbox.removeAttribute('open');
+    }
+
+    galleryItems.forEach((item, index) => item.addEventListener('click', () => openLightbox(index)));
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => showPhoto(activePhoto - 1));
+    lightboxNext.addEventListener('click', () => showPhoto(activePhoto + 1));
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+    lightbox.addEventListener('close', () => {
+      lightboxImage.src = '';
+      if (lightboxReturnFocus) lightboxReturnFocus.focus();
+      lightboxReturnFocus = null;
+    });
+    lightbox.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); showPhoto(activePhoto - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(activePhoto + 1); }
+    });
   </script>
 
 </body>
