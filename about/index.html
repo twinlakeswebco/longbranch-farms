@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../styles.css" />
 
@@ -46,64 +46,34 @@
   <style>
     #about-hero {
       position: relative;
-      min-height: max(520px, 52vh);
-      display: grid;
-      place-items: end;
-      overflow: hidden;
       background: var(--soil);
     }
-    #about-hero .hero-bg {
-      background-position: center 44%;
+    .about-hero-inner {
+      width: calc(100% - 2 * var(--side));
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 8rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
     }
-    #about-hero .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0 3% 0 43%;
-      background-image: inherit;
-      background-repeat: no-repeat;
-      background-size: auto 165%;
-      background-position: center 48%;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%);
-      mask-image: linear-gradient(to right, transparent 0%, #000 24%);
+    #about-hero .hero-content { padding: 0; }
+    .about-hero-inner > picture { display: block; }
+    #about-hero .hero-headline {
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      max-width: 18ch;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
     }
-    #about-hero .hero-overlay {
-      background: linear-gradient(
-        90deg,
-        rgba(15,14,10,0.82) 0%,
-        rgba(15,14,10,0.65) 38%,
-        rgba(15,14,10,0.18) 72%,
-        rgba(15,14,10,0.28) 100%
-      );
-    }
-    #about-hero .hero-content { padding-bottom: 4rem; }
-    #about-hero .hero-headline { font-size: clamp(2.4rem, 5.5vw, 4.5rem); max-width: 18ch; }
-
-    @media (max-width: 700px) {
-      #about-hero {
-        min-height: 720px;
-      }
-      #about-hero .hero-bg {
-        background-position: center 48%;
-      }
-      #about-hero .hero-bg::after {
-        inset: 64px 0 180px;
-        background-size: cover;
-        background-position: center 48%;
-        -webkit-mask-image: none;
-        mask-image: none;
-      }
-      #about-hero .hero-overlay {
-        background: linear-gradient(
-          to bottom,
-          rgba(15,14,10,0.08) 12%,
-          rgba(15,14,10,0.2) 48%,
-          rgba(15,14,10,0.86) 76%,
-          rgba(15,14,10,0.96) 100%
-        );
-      }
-      #about-hero .hero-content {
-        padding-bottom: 2.25rem;
-      }
+    #about-hero .hero-sub { color: var(--cream); font-size: 1.0625rem; line-height: 1.7; margin: 0; }
+    .about-family-photo {
+      display: block;
+      width: 100%;
+      height: clamp(380px, 40vw, 520px);
+      object-fit: cover;
+      object-position: center 62%;
     }
 
     #about-body {
@@ -111,26 +81,27 @@
       background: var(--cream);
     }
     .about-copy {
-      max-width: 62ch;
+      max-width: 68ch;
       margin: 0 auto;
     }
     .about-copy p {
-      font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-      color: #4a3a22;
-      line-height: 1.9;
+      font-size: 1.0625rem;
+      color: var(--bark);
+      line-height: 1.8;
       margin-bottom: 1.3rem;
     }
     .about-copy p:last-of-type { margin-bottom: 0; }
 
     #about-gallery {
-      padding: 0 0 clamp(5rem, 10vw, 9rem);
+      padding: 0 0 clamp(3.5rem, 7vw, 6rem);
       background: var(--cream);
       overflow: hidden;
     }
     .gallery-heading {
       max-width: var(--max-w);
+      width: calc(100% - 2 * var(--side));
       margin: 0 auto 1.75rem;
-      padding: 0 var(--side);
+      padding: 0;
       display: flex;
       align-items: end;
       justify-content: space-between;
@@ -145,8 +116,8 @@
     }
     .gallery-heading p {
       max-width: 31ch;
-      color: #6a5a3a;
-      font-size: 0.9rem;
+      color: var(--bark);
+      font-size: 1rem;
       line-height: 1.65;
       text-align: right;
     }
@@ -160,71 +131,55 @@
       scroll-snap-type: x mandatory;
       scroll-padding-inline: var(--side);
       overscroll-behavior-inline: contain;
-      padding: 0 var(--side) 1.1rem;
-      scrollbar-color: var(--hay) rgba(46,32,16,0.14);
+      padding: 0 max(var(--side), calc((100vw - var(--max-w)) / 2)) 1.1rem;
+      scroll-padding-inline: max(var(--side), calc((100vw - var(--max-w)) / 2));
+      scrollbar-color: var(--moss-lt) var(--cream-dk);
       scrollbar-width: thin;
       -webkit-overflow-scrolling: touch;
     }
     .scroll-gallery::-webkit-scrollbar { height: 7px; }
     .scroll-gallery::-webkit-scrollbar-track { background: rgba(46,32,16,0.12); }
-    .scroll-gallery::-webkit-scrollbar-thumb { background: var(--hay); }
+    .scroll-gallery::-webkit-scrollbar-thumb { background: var(--moss-lt); }
     .gallery-item {
       position: relative;
       flex: 0 0 clamp(270px, 34vw, 460px);
-      aspect-ratio: 4 / 3;
       scroll-snap-align: start;
-      overflow: hidden;
+      overflow: visible;
       border: 0;
       padding: 0;
-      background: var(--bark);
-      color: var(--cream);
+      background: transparent;
+      color: var(--soil);
       cursor: zoom-in;
       text-align: left;
       font: inherit;
+      text-decoration: none;
     }
     .gallery-item picture,
     .gallery-item img {
       width: 100%;
-      height: 100%;
+      height: auto;
       display: block;
     }
     .gallery-item img {
       object-fit: cover;
-      transition: transform 0.65s var(--ease), filter 0.4s var(--ease);
-    }
-    .gallery-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(10,8,3,0.82), transparent 55%);
-      transition: background var(--dur) var(--ease);
-      pointer-events: none;
+      aspect-ratio: 4 / 3;
     }
     .gallery-caption {
-      position: absolute;
-      z-index: 2;
-      left: 1.1rem;
-      right: 1.1rem;
-      bottom: 1rem;
+      padding: 0.8rem 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--hay-lt);
+      font-size: 1rem;
+      color: var(--soil);
       pointer-events: none;
     }
     .gallery-zoom {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
-      color: var(--cream);
-      letter-spacing: 0.08em;
-      opacity: 0;
-      transform: translateY(5px);
-      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+      color: var(--moss);
+      font-size: 0.875rem;
     }
     .gallery-zoom svg {
       width: 1rem;
@@ -233,34 +188,27 @@
       fill: none;
       stroke-width: 1.8;
     }
-    .gallery-item:hover img,
-    .gallery-item:focus-visible img {
-      transform: scale(1.045);
-      filter: brightness(0.78);
-    }
     .gallery-item:hover .gallery-zoom,
     .gallery-item:focus-visible .gallery-zoom {
-      opacity: 1;
-      transform: none;
+      text-decoration: underline;
     }
     .gallery-item:focus-visible {
-      outline: 3px solid var(--hay);
-      outline-offset: -3px;
+      outline: 2px solid var(--moss);
+      outline-offset: 4px;
     }
     .gallery-controls {
       max-width: var(--max-w);
+      width: calc(100% - 2 * var(--side));
       margin: 1rem auto 0;
-      padding: 0 var(--side);
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
     }
     .gallery-count {
-      color: #6a5a3a;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      color: var(--bark);
+      font-size: 0.9375rem;
     }
     .gallery-arrows { display: flex; gap: 0.5rem; }
     .gallery-arrow,
@@ -293,6 +241,7 @@
       width: 100vw;
       max-width: none;
       height: 100vh;
+      height: 100dvh;
       max-height: none;
       margin: 0;
       padding: 0;
@@ -301,6 +250,7 @@
       color: var(--cream);
     }
     .gallery-lightbox::backdrop { background: rgba(10,8,3,0.88); }
+    .gallery-lightbox:focus { outline: none; }
     .gallery-lightbox[open] {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
@@ -324,13 +274,14 @@
       max-width: 100%;
       height: auto;
       max-height: calc(100vh - 8rem);
+      max-height: calc(100dvh - 8rem);
       object-fit: contain;
       box-shadow: 0 20px 65px rgba(0,0,0,0.5);
     }
     .lightbox-caption {
       padding-top: 0.8rem;
-      color: rgba(245,240,232,0.72);
-      font-size: 0.82rem;
+      color: var(--cream);
+      font-size: 0.9375rem;
       line-height: 1.5;
       text-align: center;
     }
@@ -355,13 +306,86 @@
     .lightbox-status {
       grid-column: 1 / -1;
       grid-row: 2;
-      color: rgba(245,240,232,0.55);
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
+      color: var(--cream);
+      font-size: 0.875rem;
       text-align: center;
-      text-transform: uppercase;
+    }
+    /* Match the homepage's navigation, type and footer. */
+    body { font-weight: 400; }
+    html { scrollbar-color: var(--moss-lt) var(--cream); }
+    a { text-underline-offset: 0.2em; }
+    a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 5px;
+    }
+    header, header.scrolled { background: var(--soil); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .logo-name { letter-spacing: 0; font-size: 1.125rem; }
+    .logo-name small, .nav-drawer-label small, .nav-drawer-note {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: var(--cream);
+    }
+    header nav a, .nav-drawer-links a {
+      font-size: 0.9375rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--cream);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    header nav a[aria-current="page"] { text-decoration: underline; }
+    .nav-drawer-links .nav-drawer-cta { color: var(--soil); }
+    .nav-drawer { color: var(--cream); }
+    .about-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      color: var(--soil);
+      text-wrap: balance;
+      margin-bottom: 1.5rem;
+    }
+    .gallery-heading h2 { letter-spacing: -0.02em; }
+    .gallery-arrow:disabled { opacity: 0.4; cursor: default; }
+    .gallery-arrow:disabled:hover { background: transparent; color: var(--moss); border-color: rgba(59,74,47,0.32); }
+    html:not(.js-gallery) .gallery-controls { display: none; }
+    .btn-primary, .btn-ghost {
+      font-size: 0.9375rem;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0.8rem 1.7rem;
+      min-height: 48px;
+    }
+    .btn-primary:hover { background: var(--hay-lt); color: var(--soil); }
+    .cta-content { text-align: left; }
+    .cta-content h2 { font-size: clamp(2rem, 4.5vw, 3.75rem); letter-spacing: -0.02em; text-wrap: balance; }
+    .cta-content p { margin-left: 0; max-width: 56ch; color: var(--cream); }
+    .cta-btns { justify-content: flex-start; }
+    footer { color: var(--cream); }
+    .footer-top { gap: 2rem; grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr; }
+    .footer-col h4 { font-size: 0.9375rem; letter-spacing: 0; text-transform: none; font-weight: 500; }
+    .footer-col a, .footer-col p, .footer-brand p { font-size: 0.9375rem; color: rgba(245,240,232,0.85); }
+    .footer-col a { overflow-wrap: anywhere; }
+    .footer-copy, .site-credit, .footer-legal a { font-size: 0.8125rem; color: rgba(245,240,232,0.8); letter-spacing: 0; text-transform: none; }
+    .site-credit a { color: var(--hay-lt); }
+    .social-link { width: 44px; height: 44px; }
+    .footer-col .social-link { display: inline-flex; }
+    .social-link svg { fill: var(--cream); }
+    .footer-legal a { padding-block: 0.75rem; }
+    @media (max-width: 960px) {
+      .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-hero-inner { gap: 2rem; }
     }
     @media (max-width: 660px) {
+      .about-hero-inner { grid-template-columns: 1fr; padding: 6.75rem 0 3rem; }
+      .about-hero-inner > picture { order: -1; }
+      .about-family-photo { height: clamp(300px, 84vw, 430px); }
+      #about-hero .hero-headline { font-size: clamp(2.3rem, 9.5vw, 3rem); }
+      .logo-name { font-size: 1rem; }
+      .footer-top { grid-template-columns: 1fr; }
       .gallery-heading {
         align-items: start;
         flex-direction: column;
@@ -369,7 +393,6 @@
       }
       .gallery-heading p { text-align: left; }
       .gallery-item { flex-basis: min(82vw, 360px); }
-      .gallery-zoom { opacity: 1; transform: none; }
       .gallery-lightbox[open] {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: minmax(0, 1fr) auto auto;
@@ -377,7 +400,7 @@
         padding: 4rem 0.75rem 1rem;
       }
       .lightbox-figure { grid-column: 1 / -1; grid-row: 1; }
-      .lightbox-image { max-height: calc(100vh - 11rem); }
+      .lightbox-image { max-height: calc(100vh - 11rem); max-height: calc(100dvh - 11rem); }
       .lightbox-prev { grid-column: 1; grid-row: 2; justify-self: end; }
       .lightbox-next { grid-column: 2; grid-row: 2; justify-self: start; }
       .lightbox-status { grid-row: 3; }
@@ -386,33 +409,6 @@
 </head>
 
 <body>
-  <script>
-    /* NOTE: this block is duplicated verbatim on all five pages and must stay
-       in sync. It has to be inline and ahead of the content it governs, so it
-       cannot live in a shared file.
-
-       Progressive enhancement: .reveal content is visible by default in CSS so
-       the page is readable with JS disabled, blocked, or broken. This runs as
-       the first thing in <body>, before any revealed content is parsed or
-       painted, so opting in to the hidden-then-animate state cannot flash. */
-    (function () {
-      if (!('IntersectionObserver' in window)) return;
-      var root = document.documentElement;
-      root.classList.add('js-reveal');
-      // Failsafe: if the observer at the foot of the page never registered,
-      // something downstream broke and the hidden state would be permanent.
-      // Drop back to plain visible content. DOMContentLoaded fires after that
-      // inline script has run, so the check is exact; the timer is a backstop
-      // for a parse that never completes. Deliberately not tied to `load`,
-      // which waits on multi-megabyte photos.
-      var failsafe = function () {
-        if (!root.hasAttribute('data-reveal-observer')) root.classList.remove('js-reveal');
-      };
-      document.addEventListener('DOMContentLoaded', failsafe);
-      setTimeout(failsafe, 2000);
-    })();
-  </script>
-
   <!-- Header -->
   <header id="site-header">
     <a href="../" class="logo-wrap">
@@ -423,10 +419,10 @@
       </span>
     </a>
     <nav>
-      <a href="../about/">About</a>
-      <a href="../#products">Shop</a>
+      <a href="../about/" aria-current="page">About</a>
+      <a href="https://shop.longbranch-farms.com">Shop</a>
       <a href="../contact/">Contact</a>
-      <a href="../#products" class="nav-cta">Order Now</a>
+      <a href="https://shop.longbranch-farms.com" class="nav-cta">Order Now</a>
     </nav>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -443,10 +439,10 @@
         </button>
       </div>
       <nav class="nav-drawer-links" aria-label="Mobile">
-        <a href="../about/">About</a>
-        <a href="../#products">Shop</a>
+        <a href="../about/" aria-current="page">About</a>
+        <a href="https://shop.longbranch-farms.com">Shop</a>
         <a href="../contact/">Contact</a>
-        <a href="../#products" class="nav-drawer-cta">Order Now</a>
+        <a href="https://shop.longbranch-farms.com" class="nav-drawer-cta">Order Now</a>
       </nav>
       <p class="nav-drawer-note">Grayson County, Kentucky</p>
     </div>
@@ -454,33 +450,34 @@
 
   <!-- About Hero -->
   <section id="about-hero">
-    <div class="hero-bg bg-photo-20 loaded"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal">Our Story</p>
-      <h1 class="hero-headline reveal" style="transition-delay:.1s">
-        Two working parents.<br /><em>One small farm.</em>
-      </h1>
-      <p class="hero-sub reveal" style="transition-delay:.2s">
-        Long Branch Farms is a family operation in Grayson County, Kentucky, raising pasture-fed beef and pork for our neighbors across Western Central Kentucky.
-      </p>
+    <div class="about-hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-headline">Two working parents.<br />One small farm.</h1>
+        <p class="hero-sub">
+          Long Branch Farms is a family operation in Grayson County, Kentucky, raising pasture-fed beef and pork for our neighbors across Western Central Kentucky.
+        </p>
+      </div>
+      <picture>
+        <source type="image/webp" srcset="../images/photo-20-480.webp 480w, ../images/photo-20-960.webp 960w, ../images/photo-20-1440.webp 1440w" sizes="(max-width: 660px) 90vw, 560px" />
+        <img class="about-family-photo" src="../images/photo-20.jpeg" srcset="../images/photo-20-480.jpeg 480w, ../images/photo-20-960.jpeg 960w, ../images/photo-20.jpeg 1440w" sizes="(max-width: 660px) 90vw, 560px" width="1440" height="1920" alt="The Long Branch Farms family bundled up together in a snow-covered farm vehicle" fetchpriority="high" />
+      </picture>
     </div>
   </section>
 
   <!-- Full Story -->
   <section id="about-body">
     <div class="about-copy">
-      <p class="section-label reveal" style="justify-content:center">Why We Started</p>
-      <p class="reveal" style="transition-delay:.05s">
+      <h2>Why we started</h2>
+      <p>
         Long Branch Farms was born out of a desire to provide our community with fresh, healthy, locally grown food. We wanted people in our area to know exactly what they're being fed and how it was raised, so they can trust what ends up on their table.
       </p>
-      <p class="reveal" style="transition-delay:.1s">
-        We're two working parents raising a six-year-old, running this farm alongside our full-time jobs since 2022. It's a lot to take on, but we believe doing things the right way is always worth the extra effort.
+      <p>
+        We're two working parents raising a six-year-old, running this farm alongside our full-time jobs since 2022.
       </p>
-      <p class="reveal" style="transition-delay:.15s">
-        Everything we raise, we raise ourselves. Our pigs have access to pasture and woods and are fed milk from our own A2/A2 dairy cow, with feed we mix by hand every single day. Our beef is grass-finished from start to finish for a leaner, healthier cut. No antibiotics. No vaccines. No shortcuts. If we wouldn't feed it to our own family, it doesn't leave this farm.
+      <p>
+        Everything we raise, we raise ourselves. Our pigs have access to pasture and woods and are fed milk from our own A2/A2 dairy cow, with feed we mix by hand every day. Our beef is raised and finished on grass. No antibiotics or vaccines. If we wouldn't feed it to our own family, it doesn't leave this farm.
       </p>
-      <p class="reveal" style="transition-delay:.2s">
+      <p>
         We proudly serve Western Central Kentucky and are a member of Kentucky Proud, the state's program for locally grown and raised food.
       </p>
     </div>
@@ -494,62 +491,62 @@
     </div>
     <div class="gallery-shell">
       <div class="scroll-gallery" id="farmGallery" role="region" aria-label="Long Branch Farms photo gallery" tabindex="0">
-        <button class="gallery-item" type="button" data-full="../images/photo-17.jpeg" aria-label="Enlarge photo: Open Pasture">
+        <a class="gallery-item" href="../images/photo-17.jpeg" data-full="../images/photo-17.jpeg" aria-label="Enlarge photo: Dairy cows">
           <picture>
             <source type="image/webp" srcset="../images/photo-17-480.webp 480w, ../images/photo-17-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-17.jpeg" srcset="../images/photo-17-480.jpeg 480w, ../images/photo-17-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Two Jersey milk cows in their barn stalls, looking out through the open gate at the pasture" />
           </picture>
-          <span class="gallery-caption"><span>Open Pasture</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-10.jpeg" aria-label="Enlarge photo: Daily Chores">
+          <span class="gallery-caption"><span>Dairy cows</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-10.jpeg" data-full="../images/photo-10.jpeg" aria-label="Enlarge photo: A new calf">
           <picture>
             <source type="image/webp" srcset="../images/photo-10-480.webp 480w, ../images/photo-10-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-10.jpeg" srcset="../images/photo-10-480.jpeg 480w, ../images/photo-10-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A white calf with black ears standing close to a farmer kneeling at the fence, its mother watching alongside" />
           </picture>
-          <span class="gallery-caption"><span>Daily Chores</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-14.jpeg" aria-label="Enlarge photo: The Herd">
+          <span class="gallery-caption"><span>A new calf</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-14.jpeg" data-full="../images/photo-14.jpeg" aria-label="Enlarge photo: Resting in the barn">
           <picture>
             <source type="image/webp" srcset="../images/photo-14-480.webp 480w, ../images/photo-14-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-14.jpeg" srcset="../images/photo-14-480.jpeg 480w, ../images/photo-14-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A newborn calf dozing in fresh straw with a hand cupped under its chin" />
           </picture>
-          <span class="gallery-caption"><span>The Herd</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-19.jpeg" aria-label="Enlarge photo: Grayson County">
+          <span class="gallery-caption"><span>Resting in the barn</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-19.jpeg" data-full="../images/photo-19.jpeg" aria-label="Enlarge photo: Growing up on the farm">
           <picture>
             <source type="image/webp" srcset="../images/photo-19-480.webp 480w, ../images/photo-19-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-19.jpeg" srcset="../images/photo-19-480.jpeg 480w, ../images/photo-19-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A young child hugging a brown dairy cow in a pasture at sunset" />
           </picture>
-          <span class="gallery-caption"><span>Grayson County</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-4.jpeg" aria-label="Enlarge photo: Mangalitsa Hogs">
+          <span class="gallery-caption"><span>Growing up on the farm</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-4.jpeg" data-full="../images/photo-4.jpeg" aria-label="Enlarge photo: Mangalitsa Hogs">
           <picture>
             <source type="image/webp" srcset="../images/photo-4-480.webp 480w, ../images/photo-4-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-4.jpeg" srcset="../images/photo-4-480.jpeg 480w, ../images/photo-4-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Woolly Mangalitsa hogs rooting along the fence in tall summer grass, with the barn and rolling fields behind them" />
           </picture>
           <span class="gallery-caption"><span>Mangalitsa Hogs</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-16.jpeg" aria-label="Enlarge photo: Pasture Raised">
+        </a>
+        <a class="gallery-item" href="../images/photo-16.jpeg" data-full="../images/photo-16.jpeg" aria-label="Enlarge photo: Out on pasture">
           <picture>
             <source type="image/webp" srcset="../images/photo-16-480.webp 480w, ../images/photo-16-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-16.jpeg" srcset="../images/photo-16-480.jpeg 480w, ../images/photo-16-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1080" loading="lazy" alt="Four red hogs grazing across a hillside pasture full of yellow buttercups" />
           </picture>
-          <span class="gallery-caption"><span>Pasture Raised</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-21.jpeg" aria-label="Enlarge photo: New Arrivals">
+          <span class="gallery-caption"><span>Out on pasture</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-21.jpeg" data-full="../images/photo-21.jpeg" aria-label="Enlarge photo: New piglets">
           <picture>
             <source type="image/webp" srcset="../images/photo-21-480.webp 480w, ../images/photo-21-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-21.jpeg" srcset="../images/photo-21-480.jpeg 480w, ../images/photo-21-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="A litter of striped piglets crowded shoulder to shoulder in the straw of the barn stall" />
           </picture>
-          <span class="gallery-caption"><span>New Arrivals</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
-        <button class="gallery-item" type="button" data-full="../images/photo-23.jpeg" aria-label="Enlarge photo: Evening Rounds">
+          <span class="gallery-caption"><span>New piglets</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
+        <a class="gallery-item" href="../images/photo-23.jpeg" data-full="../images/photo-23.jpeg" aria-label="Enlarge photo: Evening rounds">
           <picture>
             <source type="image/webp" srcset="../images/photo-23-480.webp 480w, ../images/photo-23-960.webp 960w" sizes="(max-width: 660px) 82vw, 460px" />
             <img src="../images/photo-23.jpeg" srcset="../images/photo-23-480.jpeg 480w, ../images/photo-23-960.jpeg 960w" sizes="(max-width: 660px) 82vw, 460px" width="1440" height="1920" loading="lazy" alt="Two hogs meeting at the fence line in the evening, one grazing and one looking straight at the camera" />
           </picture>
-          <span class="gallery-caption"><span>Evening Rounds</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
-        </button>
+          <span class="gallery-caption"><span>Evening rounds</span><span class="gallery-zoom"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>View</span></span>
+        </a>
       </div>
       <div class="gallery-controls">
         <span class="gallery-count">8 farm photos</span>
@@ -577,10 +574,10 @@
     <div class="cta-bg bg-photo-18"></div>
     <div class="cta-overlay"></div>
     <div class="cta-content">
-      <h2 class="reveal">Taste the <em>difference</em><br />real care makes.</h2>
-      <p class="reveal" style="transition-delay:.1s">Bulk orders, bundle boxes, and individual cuts available. Inventory is limited and moves fast.</p>
-      <div class="cta-btns reveal" style="transition-delay:.18s">
-        <a href="../#products" class="btn-primary">Shop Our Cuts</a>
+      <h2>Meet the food we raise.</h2>
+      <p>Explore our individual cuts, bundle boxes, and bulk orders. Ask us about how the animals are raised or what's available.</p>
+      <div class="cta-btns">
+        <a href="https://shop.longbranch-farms.com" class="btn-primary">Shop Our Cuts</a>
         <a href="../contact/" class="btn-ghost">Ask a Question</a>
       </div>
     </div>
@@ -597,22 +594,22 @@
         <div class="footer-col">
           <h4>Navigate</h4>
           <a href="../about/">About Us</a>
-          <a href="../#products">Shop</a>
+          <a href="https://shop.longbranch-farms.com">Shop</a>
           <a href="../contact/">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Products</h4>
-          <a href="../#products">Beef Cuts</a>
-          <a href="../#products">Pork Cuts</a>
-          <a href="../#products">Bundles &amp; Bulk</a>
-          <a href="../#products">Eggs</a>
+          <a href="https://shop.longbranch-farms.com">Beef Cuts</a>
+          <a href="https://shop.longbranch-farms.com">Pork Cuts</a>
+          <a href="https://shop.longbranch-farms.com">Bundles &amp; Bulk</a>
+          <a href="https://shop.longbranch-farms.com">Eggs</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <p>120 Long Branch Drive<br />Leitchfield, KY 42754</p>
           <a href="mailto:longbranchfarmsky@gmail.com">longbranchfarmsky@gmail.com</a>
           <a href="https://www.kyproud.com/members/long-branch-farms" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:0.75rem;">
-            🌿 Kentucky Proud Member
+            Kentucky Proud Member
           </a>
           <div class="social-row">
             <a href="https://www.facebook.com/profile.php?id=61573708114780" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
@@ -718,20 +715,6 @@
     if (navMq.addEventListener) navMq.addEventListener('change', navMqChange);
     else if (navMq.addListener) navMq.addListener(navMqChange);
 
-    // Guarded so a browser without IntersectionObserver does not throw here and
-    // abort the rest of this script. Without the observer the .reveal elements
-    // simply stay visible (see the failsafe at the top of <body>).
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-      // Signals to that failsafe that the reveal machinery is live.
-      document.documentElement.setAttribute('data-reveal-observer', 'on');
-    }
-
     // Scrollable photo gallery and full-size viewer
     const gallery = document.getElementById('farmGallery');
     const galleryItems = Array.from(gallery.querySelectorAll('.gallery-item'));
@@ -758,6 +741,15 @@
       if (event.key === 'ArrowLeft') { event.preventDefault(); scrollGallery(-1); }
       if (event.key === 'ArrowRight') { event.preventDefault(); scrollGallery(1); }
     });
+    function updateGalleryControls() {
+      const end = gallery.scrollWidth - gallery.clientWidth;
+      galleryPrev.disabled = gallery.scrollLeft <= 1;
+      galleryNext.disabled = gallery.scrollLeft >= end - 1;
+    }
+    gallery.addEventListener('scroll', updateGalleryControls, { passive: true });
+    window.addEventListener('resize', updateGalleryControls);
+    updateGalleryControls();
+    document.documentElement.classList.add('js-gallery');
     galleryPrev.addEventListener('click', () => scrollGallery(-1));
     galleryNext.addEventListener('click', () => scrollGallery(1));
 
@@ -785,7 +777,11 @@
       else lightbox.removeAttribute('open');
     }
 
-    galleryItems.forEach((item, index) => item.addEventListener('click', () => openLightbox(index)));
+    galleryItems.forEach((item, index) => item.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openLightbox(index);
+    }));
     lightboxClose.addEventListener('click', closeLightbox);
     lightboxPrev.addEventListener('click', () => showPhoto(activePhoto - 1));
     lightboxNext.addEventListener('click', () => showPhoto(activePhoto + 1));

@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-10-14T10:39:42.395Z",
         "reason": "Agent: scanner reports the superseded shared footer size of 11.52px. Homepage styles override it to 13px; browser inspection verified no rendered text below 12px and body text at 16px."
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "about/index.html"
+        ],
+        "createdAt": "2026-10-14T10:50:01.084Z",
+        "reason": "Agent: the only image without src is #lightboxImage inside a closed native dialog. showPhoto sets its real photo and description before opening it. Browser checks verified all eight images and descriptions at four screen widths. The detector does not support an element-specific ignore for this rule."
       }
     ]
   }
