@@ -184,7 +184,7 @@ async function checkRoutes(browser, base) {
       // Every internal link resolves to a real page, resolved the way a
       // browser actually resolves it (relative to this page's own URL).
       const hrefs = await page.$$eval('a[href]', (as) => as.map((a) => a.getAttribute('href')));
-      const internal = [...new Set(hrefs)].filter((h) => h && !/^(https?:|mailto:|tel:|#)/.test(h));
+      const internal = [...new Set(hrefs)].filter((h) => h && !/^(https?:|mailto:|tel:|sms:|#)/.test(h));
       for (const h of internal) {
         const target = new URL(h, base + route.path);
         target.hash = '';

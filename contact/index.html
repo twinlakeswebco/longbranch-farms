@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../styles.css" />
 
@@ -82,16 +82,19 @@
   <style>
     #contact-hero {
       position: relative;
-      min-height: 52vh;
+      min-height: 440px;
       display: grid;
       place-items: end;
       overflow: hidden;
     }
-    #contact-hero .hero-content { padding-bottom: 4rem; }
-    #contact-hero .hero-headline { font-size: clamp(2.4rem, 5.5vw, 4.5rem); max-width: 18ch; }
+    #contact-hero .hero-content { padding-top: 9rem; padding-bottom: 3.5rem; }
+    #contact-hero .hero-headline { font-size: clamp(2.5rem, 5vw, 4rem); max-width: 18ch; line-height: 1.1; letter-spacing: -0.025em; }
+    #contact-hero .hero-sub { color: var(--cream); font-size: 1.0625rem; line-height: 1.7; max-width: 50ch; margin-bottom: 1.75rem; }
+    #contact-hero .hero-overlay { background: linear-gradient(90deg, rgba(26,18,8,0.85), rgba(26,18,8,0.58)); }
+    #contact-hero .btn-ghost { border-color: transparent; padding-inline: 0; text-decoration: underline; }
 
     #contact-body {
-      padding: clamp(4rem, 9vw, 7rem) var(--side);
+      padding: clamp(3.5rem, 7vw, 6rem) var(--side);
       background: var(--cream);
     }
     .contact-grid {
@@ -105,9 +108,7 @@
 
     /* ── FORM ──────────────────────────────────────────────────── */
     .contact-form-wrap {
-      background: var(--white);
-      border: 1px solid rgba(26,18,8,0.09);
-      padding: clamp(1.75rem, 4vw, 3rem);
+      min-width: 0;
     }
     .contact-form-wrap h2 {
       font-family: var(--serif);
@@ -115,12 +116,12 @@
       font-size: clamp(1.8rem, 3vw, 2.6rem);
       line-height: 1.15;
       margin-bottom: 0.85rem;
+      letter-spacing: -0.02em;
     }
-    .contact-form-wrap h2 em { font-style: italic; color: var(--moss-lt); }
     .contact-form-intro {
-      font-size: 0.95rem;
-      color: #4a3a22;
-      line-height: 1.8;
+      font-size: 1rem;
+      color: var(--bark);
+      line-height: 1.7;
       max-width: 46ch;
       margin-bottom: 2.2rem;
     }
@@ -134,31 +135,29 @@
     }
     .field { display: flex; flex-direction: column; }
     .field label {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      font-size: 0.9375rem;
       color: var(--bark);
       font-weight: 500;
       margin-bottom: 0.55rem;
     }
     .field .optional {
-      letter-spacing: 0.08em;
-      text-transform: none;
-      font-weight: 300;
-      color: var(--ink-fade);
+      font-weight: 400;
+      color: var(--moss);
     }
     .field input,
     .field select,
     .field textarea {
       font-family: var(--sans);
-      font-weight: 300;
-      font-size: 0.95rem;
+      font-weight: 400;
+      font-size: 1rem;
       color: var(--soil);
-      background: var(--cream);
-      border: 1px solid rgba(26,18,8,0.18);
+      background: var(--white);
+      border: 1px solid var(--moss-lt);
       border-radius: 0;
       padding: 0.8rem 0.95rem;
       width: 100%;
+      min-height: 48px;
+      caret-color: var(--moss);
       transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
       -webkit-appearance: none;
       appearance: none;
@@ -174,18 +173,17 @@
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
-      outline: none;
-      border-color: var(--moss-lt);
+      outline: 2px solid var(--moss);
+      outline-offset: 3px;
+      border-color: var(--moss);
       background: var(--white);
-      box-shadow: 0 0 0 2px rgba(90,112,72,0.18);
     }
     .field input[aria-invalid="true"],
     .field textarea[aria-invalid="true"] {
       border-color: #9c3a1e;
-      box-shadow: 0 0 0 2px rgba(156,58,30,0.14);
     }
     .field-error {
-      font-size: 0.78rem;
+      font-size: 0.875rem;
       color: #9c3a1e;
       margin-top: 0.4rem;
       min-height: 0;
@@ -206,19 +204,21 @@
       cursor: progress;
     }
     .form-fineprint {
-      font-size: 0.8rem;
-      color: var(--ink-fade);
+      font-size: 0.9375rem;
+      color: var(--bark);
       line-height: 1.7;
       margin-top: -0.4rem;
     }
 
     /* ── RESULT PANELS ─────────────────────────────────────────── */
     .form-result {
-      border-left: 3px solid var(--moss-lt);
-      background: var(--cream);
-      padding: clamp(1.5rem, 3vw, 2.25rem);
+      border-top: 1px solid var(--moss-lt);
+      padding: 1.5rem 0;
+      margin-top: 1.5rem;
+      scroll-margin-top: 7rem;
     }
-    .form-result.is-error { border-left-color: #9c3a1e; }
+    .form-result.is-error { border-top-color: #9c3a1e; }
+    .form-result.is-error h3 { color: #9c3a1e; }
     .form-result h3 {
       font-family: var(--serif);
       font-weight: 400;
@@ -226,8 +226,8 @@
       margin-bottom: 0.75rem;
     }
     .form-result p {
-      font-size: 0.95rem;
-      color: #4a3a22;
+      font-size: 1rem;
+      color: var(--bark);
       line-height: 1.8;
       margin-bottom: 0.9rem;
     }
@@ -241,7 +241,7 @@
     .form-result a:hover { color: var(--moss-lt); }
 
     /* ── DETAILS COLUMN ────────────────────────────────────────── */
-    .contact-details { position: sticky; top: 6.5rem; }
+    .contact-details { position: sticky; top: 6.5rem; min-width: 0; }
     .contact-details h2 {
       font-family: var(--serif);
       font-weight: 400;
@@ -255,9 +255,8 @@
     }
     .detail-block:last-of-type { border-bottom: 1px solid rgba(26,18,8,0.12); }
     .detail-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      font-size: 0.9375rem;
+      font-weight: 500;
       color: var(--moss);
       margin-bottom: 0.5rem;
     }
@@ -270,25 +269,17 @@
     .detail-value a {
       color: var(--soil);
       text-decoration: none;
-      border-bottom: 1px solid var(--hay);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      overflow-wrap: anywhere;
       transition: color var(--dur) var(--ease);
     }
     .detail-value a:hover { color: var(--moss); }
     .detail-note {
-      font-size: 0.85rem;
-      color: #4a3a22;
+      font-size: 1rem;
+      color: var(--bark);
       line-height: 1.7;
       margin-top: 0.45rem;
-    }
-    .detail-flag {
-      display: inline-block;
-      margin-top: 0.6rem;
-      background: var(--moss);
-      color: var(--cream);
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.7rem;
     }
     .detail-links {
       display: flex;
@@ -297,22 +288,82 @@
       margin-top: 1.4rem;
     }
     .detail-links a {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.9375rem;
       color: var(--moss);
       text-decoration: none;
       border-bottom: 1px solid rgba(59,74,47,0.35);
-      padding-bottom: 2px;
+      padding-block: 0.6rem;
       transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
     }
     .detail-links a:hover { color: var(--soil); border-bottom-color: var(--hay); }
 
+    /* Match the polished homepage and About page without changing shared CSS. */
+    body { font-weight: 400; }
+    html { scrollbar-color: var(--moss-lt) var(--cream); }
+    a { text-underline-offset: 0.2em; }
+    a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible, .form-result:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 5px;
+    }
+    header, header.scrolled { background: var(--soil); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .logo-name { letter-spacing: 0; font-size: 1.125rem; }
+    .logo-name small, .nav-drawer-label small, .nav-drawer-note {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: var(--cream);
+    }
+    header nav a, .nav-drawer-links a {
+      font-size: 0.9375rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--cream);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    header nav a[aria-current="page"] { text-decoration: underline; }
+    .nav-drawer-links .nav-drawer-cta { color: var(--soil); }
+    .nav-drawer { color: var(--cream); }
+    .btn-primary, .btn-ghost {
+      font-size: 0.9375rem;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0.8rem 1.7rem;
+      min-height: 48px;
+    }
+    .btn-primary:hover { background: var(--hay-lt); color: var(--soil); }
+    #contact-form { scroll-margin-top: 7rem; }
+    .detail-value a { display: inline-block; padding-block: 0.25rem; }
+    .detail-value a[href^="mailto:"] { font-family: var(--sans); font-size: 1rem; }
+    .detail-note a { color: var(--moss); }
+    .cta-content { text-align: left; }
+    .cta-content h2 { font-size: clamp(2rem, 4.5vw, 3.75rem); letter-spacing: -0.02em; text-wrap: balance; }
+    .cta-content p { margin-left: 0; max-width: 56ch; color: var(--cream); }
+    .cta-btns { justify-content: flex-start; }
+    footer { color: var(--cream); }
+    .footer-top { gap: 2rem; grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr; }
+    .footer-col h4 { font-size: 0.9375rem; letter-spacing: 0; text-transform: none; font-weight: 500; }
+    .footer-col a, .footer-col p, .footer-brand p { font-size: 0.9375rem; color: rgba(245,240,232,0.85); }
+    .footer-col a { overflow-wrap: anywhere; }
+    .footer-copy, .site-credit, .footer-legal a { font-size: 0.8125rem; color: rgba(245,240,232,0.8); letter-spacing: 0; text-transform: none; }
+    .site-credit a { color: var(--hay-lt); }
+    .social-link { width: 44px; height: 44px; }
+    .footer-col .social-link { display: inline-flex; }
+    .social-link svg { fill: var(--cream); }
+    .footer-legal a { padding-block: 0.75rem; }
+
     @media (max-width: 960px) {
       .contact-grid { grid-template-columns: 1fr; }
-      .contact-details { position: static; order: -1; }
+      .contact-details { position: static; }
+      .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 660px) {
+      #contact-hero .hero-content { padding-top: 8rem; padding-bottom: 3rem; }
+      #contact-hero .hero-headline { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+      .hero-ctas { gap: 0.8rem 1.5rem; }
+      .logo-name { font-size: 1rem; }
+      .footer-top { grid-template-columns: 1fr; }
       .field-row { grid-template-columns: 1fr; }
       .contact-form button[type="submit"] { justify-self: stretch; text-align: center; }
     }
@@ -320,33 +371,6 @@
 </head>
 
 <body>
-  <script>
-    /* NOTE: this block is duplicated verbatim on all five pages and must stay
-       in sync. It has to be inline and ahead of the content it governs, so it
-       cannot live in a shared file.
-
-       Progressive enhancement: .reveal content is visible by default in CSS so
-       the page is readable with JS disabled, blocked, or broken. This runs as
-       the first thing in <body>, before any revealed content is parsed or
-       painted, so opting in to the hidden-then-animate state cannot flash. */
-    (function () {
-      if (!('IntersectionObserver' in window)) return;
-      var root = document.documentElement;
-      root.classList.add('js-reveal');
-      // Failsafe: if the observer at the foot of the page never registered,
-      // something downstream broke and the hidden state would be permanent.
-      // Drop back to plain visible content. DOMContentLoaded fires after that
-      // inline script has run, so the check is exact; the timer is a backstop
-      // for a parse that never completes. Deliberately not tied to `load`,
-      // which waits on multi-megabyte photos.
-      var failsafe = function () {
-        if (!root.hasAttribute('data-reveal-observer')) root.classList.remove('js-reveal');
-      };
-      document.addEventListener('DOMContentLoaded', failsafe);
-      setTimeout(failsafe, 2000);
-    })();
-  </script>
-
   <!-- Header -->
   <header id="site-header">
     <a href="../" class="logo-wrap">
@@ -358,9 +382,9 @@
     </a>
     <nav>
       <a href="../about/">About</a>
-      <a href="../#products">Shop</a>
-      <a href="../contact/">Contact</a>
-      <a href="../#products" class="nav-cta">Order Now</a>
+      <a href="https://shop.longbranch-farms.com">Shop</a>
+      <a href="../contact/" aria-current="page">Contact</a>
+      <a href="https://shop.longbranch-farms.com" class="nav-cta">Order Now</a>
     </nav>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -378,9 +402,9 @@
       </div>
       <nav class="nav-drawer-links" aria-label="Mobile">
         <a href="../about/">About</a>
-        <a href="../#products">Shop</a>
-        <a href="../contact/">Contact</a>
-        <a href="../#products" class="nav-drawer-cta">Order Now</a>
+        <a href="https://shop.longbranch-farms.com">Shop</a>
+        <a href="../contact/" aria-current="page">Contact</a>
+        <a href="https://shop.longbranch-farms.com" class="nav-drawer-cta">Order Now</a>
       </nav>
       <p class="nav-drawer-note">Grayson County, Kentucky</p>
     </div>
@@ -391,13 +415,16 @@
     <div class="hero-bg bg-photo-25 loaded"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow reveal">Get In Touch</p>
-      <h1 class="hero-headline reveal" style="transition-delay:.1s">
-        Questions? <em>Text us.</em>
+      <h1 class="hero-headline">
+        Get in touch.
       </h1>
-      <p class="hero-sub reveal" style="transition-delay:.2s">
-        We're a two-person farm with full-time jobs, so a text gets you an answer fastest. You can also send a message below and we'll get back to you.
+      <p class="hero-sub">
+        Texting is the quickest way to reach us. For orders or questions about the farm, you can also send us a message below.
       </p>
+      <div class="hero-ctas">
+        <a href="sms:+12702302339" class="btn-primary">Text (270) 230-2339</a>
+        <a href="#contact-form" class="btn-ghost">Send a message</a>
+      </div>
     </div>
   </section>
 
@@ -406,12 +433,11 @@
     <div class="contact-grid">
 
       <!-- Form -->
-      <div class="contact-form-wrap reveal">
+      <div class="contact-form-wrap">
         <div id="cf-intro">
-          <p class="section-label">Send a Message</p>
-          <h2>Tell us what you're <em>after.</em></h2>
+          <h2>Send a message</h2>
           <p class="contact-form-intro">
-            Bulk beef, a bundle box, a few pork chops, or just a question about how we raise things. Fill this out and we'll answer. If you need an answer today, text the number to the right.
+            Ask about an order, what's available, or how we raise our animals.
           </p>
         </div>
 
@@ -489,7 +515,7 @@
         </form>
 
         <!-- Success -->
-        <div class="form-result" id="cf-success" role="status" aria-live="polite" hidden>
+        <div class="form-result" id="cf-success" role="status" aria-live="polite" tabindex="-1" hidden>
           <h3>Message sent. Thank you.</h3>
           <p>
             We got it, and we'll get back to you at the email you gave us. We're usually
@@ -497,36 +523,34 @@
           </p>
           <p>
             Need an answer faster? Text us at
-            <a href="tel:+12702302339">(270) 230-2339</a> &mdash; that's the quickest way to reach us.
+            <a href="sms:+12702302339">(270) 230-2339</a> &mdash; that's the quickest way to reach us.
           </p>
         </div>
 
         <!-- Error -->
         <div class="form-result is-error" id="cf-error" role="alert" aria-live="assertive" tabindex="-1" hidden>
-          <h3>That didn't go through.</h3>
+          <h3>Message not sent.</h3>
           <p>
-            Something on our end failed to send your message. Sorry about that. What you typed is
-            still in the form above, so you can try again &mdash; or reach us directly, which always works:
+            Your message couldn't be sent. What you typed is still in the form above,
+            so you can try again or reach us directly:
           </p>
           <p>
-            Text <a href="tel:+12702302339">(270) 230-2339</a><br />
+            Text <a href="sms:+12702302339">(270) 230-2339</a><br />
             Email <a href="mailto:longbranchfarmsky@gmail.com">longbranchfarmsky@gmail.com</a>
           </p>
         </div>
       </div>
 
       <!-- Details -->
-      <aside class="contact-details reveal" style="transition-delay:.1s">
-        <p class="section-label">The Farm</p>
-        <h2>Long Branch Farms</h2>
+      <aside class="contact-details">
+        <h2>Contact details</h2>
 
         <div class="detail-block">
-          <p class="detail-label">Phone</p>
-          <p class="detail-value"><a href="tel:+12702302339">(270) 230-2339</a></p>
-          <span class="detail-flag">Text is best</span>
+          <p class="detail-label">Text us</p>
+          <p class="detail-value"><a href="sms:+12702302339">(270) 230-2339</a></p>
           <p class="detail-note">
-            Texting is the best way to reach us. We both work full-time jobs on top of the farm,
-            so a text gets answered long before a voicemail does.
+            We both work full-time jobs alongside the farm, so text is best.
+            You can also <a href="tel:+12702302339">give us a call</a>.
           </p>
         </div>
 
@@ -566,10 +590,10 @@
     <div class="cta-bg bg-photo-22"></div>
     <div class="cta-overlay"></div>
     <div class="cta-content">
-      <h2 class="reveal">Know what you <em>want</em><br />already?</h2>
-      <p class="reveal" style="transition-delay:.1s">Bulk orders, bundle boxes, and individual cuts available. Inventory is limited and moves fast.</p>
-      <div class="cta-btns reveal" style="transition-delay:.18s">
-        <a href="../#products" class="btn-primary">Shop Our Cuts</a>
+      <h2>See what's in the farm shop.</h2>
+      <p>Browse individual cuts, bundle boxes, and bulk orders. The shop has current availability.</p>
+      <div class="cta-btns">
+        <a href="https://shop.longbranch-farms.com" class="btn-primary">Shop Our Cuts</a>
         <a href="../about/" class="btn-ghost">Our Story</a>
       </div>
     </div>
@@ -586,22 +610,22 @@
         <div class="footer-col">
           <h4>Navigate</h4>
           <a href="../about/">About Us</a>
-          <a href="../#products">Shop</a>
-          <a href="../contact/">Contact</a>
+          <a href="https://shop.longbranch-farms.com">Shop</a>
+          <a href="../contact/" aria-current="page">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Products</h4>
-          <a href="../#products">Beef Cuts</a>
-          <a href="../#products">Pork Cuts</a>
-          <a href="../#products">Bundles &amp; Bulk</a>
-          <a href="../#products">Eggs</a>
+          <a href="https://shop.longbranch-farms.com">Beef Cuts</a>
+          <a href="https://shop.longbranch-farms.com">Pork Cuts</a>
+          <a href="https://shop.longbranch-farms.com">Bundles &amp; Bulk</a>
+          <a href="https://shop.longbranch-farms.com">Eggs</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <p>120 Long Branch Drive<br />Leitchfield, KY 42754</p>
           <a href="mailto:longbranchfarmsky@gmail.com">longbranchfarmsky@gmail.com</a>
           <a href="https://www.kyproud.com/members/long-branch-farms" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:0.75rem;">
-            🌿 Kentucky Proud Member
+            Kentucky Proud Member
           </a>
           <div class="social-row">
             <a href="https://www.facebook.com/profile.php?id=61573708114780" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
@@ -618,7 +642,7 @@
         <div class="footer-legal">
           <a href="../privacy/">Privacy</a>
           <a href="../terms/">Terms</a>
-          <a href="../contact/">Contact</a>
+          <a href="../contact/" aria-current="page">Contact</a>
         </div>
       </div>
     </div>
@@ -633,6 +657,7 @@
       const okPanel = document.getElementById('cf-success');
       const errPanel= document.getElementById('cf-error');
       const btnLabel = btn.textContent;
+      const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
       // Suppress native validation bubbles only now that JS is confirmed
       // running and will show the inline errors instead. Leaving `novalidate`
@@ -691,22 +716,25 @@
         const intro = document.getElementById('cf-intro');
         if (intro) intro.hidden = true;
         okPanel.hidden = false;
-        okPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        okPanel.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
+        okPanel.focus({ preventScroll: true });
       }
       function showError() {
         errPanel.hidden = false;
-        errPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        errPanel.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
         // Move focus so screen readers land on the failure instead of on the
         // re-enabled submit button, which would invite an endless retry loop.
-        errPanel.focus();
+        errPanel.focus({ preventScroll: true });
       }
 
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
+        if (btn.disabled) return;
         errPanel.hidden = true;
         if (!validate()) return;
 
         btn.disabled = true;
+        form.setAttribute('aria-busy', 'true');
         btn.textContent = 'Sending…';
 
         const payload = Object.fromEntries(new FormData(form).entries());
@@ -730,6 +758,7 @@
           showError();
         } finally {
           btn.disabled = false;
+          form.removeAttribute('aria-busy');
           btn.textContent = btnLabel;
         }
       });
@@ -819,19 +848,6 @@
     if (navMq.addEventListener) navMq.addEventListener('change', navMqChange);
     else if (navMq.addListener) navMq.addListener(navMqChange);
 
-    // Guarded so a browser without IntersectionObserver does not throw here and
-    // abort the rest of this script. Without the observer the .reveal elements
-    // simply stay visible (see the failsafe at the top of <body>).
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-      // Signals to that failsafe that the reveal machinery is live.
-      document.documentElement.setAttribute('data-reveal-observer', 'on');
-    }
   </script>
 
 </body>
