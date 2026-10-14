@@ -201,11 +201,23 @@ async function checkRoutes(browser, base) {
       // Every image has real alt text -- not empty, not a generic filler word.
       const badAlts = await page.$$eval('img', (imgs) =>
         imgs
+          // A closed lightbox has no selected photo yet. Check its image when
+          // opened below; ordinary page images still require descriptive alt.
+          .filter((i) => !(i.closest('dialog:not([open])') && !i.hasAttribute('src')))
           .map((i) => ({ src: i.getAttribute('src'), alt: i.getAttribute('alt') }))
           .filter((i) => i.alt === null || /^(farm photo|image|photo)?$/i.test((i.alt || '').trim()))
       );
       if (badAlts.length) badAlts.forEach((b) => fail(`${route.path}: generic/missing alt on ${b.src}`));
       else ok(`${route.path}: all alt text descriptive`);
+
+      if (route.path === '/about/') {
+        await page.locator('.gallery-item').first().click();
+        const enlarged = page.locator('#lightboxImage');
+        const alt = await enlarged.getAttribute('alt');
+        if (!alt || /^(farm photo|image|photo)$/i.test(alt.trim())) fail('open gallery photo: missing descriptive alt');
+        else ok('open gallery photo: descriptive alt');
+        await page.locator('#lightboxClose').click();
+      }
 
       await page.screenshot({ path: path.join(SHOTS, `${route.name}-${vp.name}.png`), fullPage: true });
       await page.close();

@@ -8,9 +8,202 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Homepage refinements; the shared styles still serve the other pages. */
+    body { font-weight: 400; }
+    html { scrollbar-color: var(--moss-lt) var(--cream); }
+    a { text-underline-offset: 0.2em; }
+    a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 5px;
+    }
+    header { background: var(--soil); }
+    header.scrolled {
+      background: var(--soil);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    .logo-name { letter-spacing: 0; font-size: 1.125rem; }
+    .logo-name small, .nav-drawer-label small, .nav-drawer-note {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: var(--cream);
+    }
+    header nav a, .nav-drawer-links a {
+      font-size: 0.9375rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--cream);
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-drawer-links .nav-drawer-cta { color: var(--soil); }
+    .nav-drawer { color: var(--cream); }
+    #hero { min-height: min(900px, 100svh); }
+    .hero-content { padding-top: 10rem; padding-bottom: clamp(3.5rem, 7vw, 6rem); }
+    .hero-bg { transition-duration: 3s; }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(26,18,8,0.15) 15%, rgba(26,18,8,0.6) 55%, rgba(26,18,8,0.92));
+    }
+    .hero-headline {
+      font-size: clamp(2.75rem, 6.5vw, 5.75rem);
+      line-height: 1.08;
+      max-width: 20ch;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.3vw, 1.125rem);
+      color: var(--cream);
+      max-width: 48ch;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+    .btn-primary, .btn-ghost {
+      font-size: 0.9375rem;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0.8rem 1.7rem;
+      min-height: 48px;
+    }
+    .hero-ctas .btn-ghost {
+      border-color: transparent;
+      padding-inline: 0;
+      text-decoration: underline;
+    }
+    .btn-primary:hover { background: var(--hay-lt); color: var(--soil); }
+    .badges { padding-block: 1.25rem; }
+    .badges-inner { list-style: none; justify-content: space-between; gap: 0.75rem 2rem; }
+    .badge-item { font-size: 0.875rem; color: var(--cream); letter-spacing: 0; text-transform: none; }
+    .badge-item a { color: var(--hay-lt); }
+    #story, #products, #promise { padding-block: clamp(4rem, 7vw, 6.5rem); }
+    .story-text h2, .promise-text h2, .products-heading {
+      font-size: clamp(2rem, 3.6vw, 3.25rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      text-wrap: balance;
+    }
+    .story-text p, .promise-text p { font-size: 1rem; line-height: 1.75; }
+    .story-text p:last-of-type { margin-bottom: 0; }
+    .pillars { display: block; margin-top: 2rem; }
+    .pillar {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border: 0;
+      border-top: 1px solid rgba(59,74,47,0.2);
+      background: none;
+    }
+    .pillar .pillar-title { font-size: 1rem; font-weight: 500; color: var(--moss); margin: 0; }
+    .pillar p { font-size: 0.9375rem; color: var(--bark); line-height: 1.6; }
+    .photo-strip-item img, .fg-item img { transition: none; }
+    .photo-strip-item:hover img, .fg-item:hover img { transform: none; }
+    .products-sub { color: var(--cream); font-size: 1rem; margin-bottom: 2rem; }
+    .product-tabs { gap: 1.5rem; margin-bottom: 0; }
+    .tab-btn {
+      font-size: 1rem;
+      color: var(--cream);
+      letter-spacing: 0;
+      text-transform: none;
+      padding: 0.85rem 0;
+      min-height: 48px;
+    }
+    .tab-btn.active, .tab-btn:hover { color: var(--hay-lt); }
+    .tab-panel.active, html:not(.js-tabs) .tab-panel {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 3rem;
+      background: none;
+    }
+    html:not(.js-tabs) .product-tabs, html.js-tabs .product-category { display: none; }
+    .product-category { grid-column: 1 / -1; margin-top: 2rem; color: var(--cream); }
+    .product-card {
+      background: none;
+      padding: 1.5rem 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(196,164,90,0.25);
+      transition: none;
+      overflow: visible;
+    }
+    .product-card::before, #promise::before { content: none; }
+    .product-card:hover { background: none; }
+    .product-name { font-size: 1.375rem; margin-bottom: 0.45rem; }
+    .product-note, .products-note { font-size: 0.9375rem; color: rgba(245,240,232,0.85); line-height: 1.6; }
+    .product-price {
+      font-size: 1rem;
+      color: var(--hay-lt);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      text-align: right;
+      max-width: 9rem;
+      padding-top: 0.15rem;
+    }
+    .products-cta-row { margin-top: 2rem; flex-wrap: wrap; gap: 1rem 2rem; }
+    .products-note { font-style: normal; }
+    .products-note a { color: var(--cream); }
+    .promise-text p, .promise-list li { color: var(--cream); }
+    .promise-list { gap: 0.6rem 1.5rem; }
+    .promise-list li { font-size: 0.9375rem; letter-spacing: 0; }
+    .quote-band { padding-block: clamp(3rem, 6vw, 5rem); text-align: left; }
+    .quote-text {
+      font-style: normal;
+      font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+      max-width: 46rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.45;
+      text-wrap: pretty;
+    }
+    .quote-attr { max-width: 46rem; margin-inline: auto; font-size: 1rem; letter-spacing: 0; text-transform: none; color: var(--moss); }
+    .cta-content { text-align: left; }
+    .cta-content h2 { font-size: clamp(2rem, 4.5vw, 3.75rem); letter-spacing: -0.02em; text-wrap: balance; }
+    .cta-content p { margin-left: 0; max-width: 56ch; color: var(--cream); }
+    .cta-btns { justify-content: flex-start; }
+    footer { color: var(--cream); }
+    .footer-top { gap: 2rem; grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr; }
+    .footer-col h4 { font-size: 0.9375rem; letter-spacing: 0; text-transform: none; font-weight: 500; }
+    .footer-col a, .footer-col p, .footer-brand p { font-size: 0.9375rem; color: rgba(245,240,232,0.85); }
+    .footer-col a { overflow-wrap: anywhere; }
+    .footer-copy, .site-credit, .footer-legal a { font-size: 0.8125rem; color: rgba(245,240,232,0.8); letter-spacing: 0; text-transform: none; }
+    .site-credit a { color: var(--hay-lt); }
+    .social-link { width: 44px; height: 44px; }
+    .footer-col .social-link { display: inline-flex; }
+    .social-link svg { fill: var(--cream); }
+    .footer-legal a { padding-block: 0.75rem; }
+    @media (max-width: 960px) {
+      .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .story-images { height: clamp(380px, 65vw, 540px); }
+      .promise-image { height: clamp(320px, 70vw, 520px); }
+    }
+    @media (max-width: 660px) {
+      #hero { min-height: 88svh; }
+      .hero-content { padding-top: 9rem; padding-bottom: 3rem; }
+      .hero-headline { font-size: clamp(2.3rem, 9.7vw, 3.5rem); }
+      .logo-name { font-size: 1rem; }
+      .hero-ctas { gap: 1.25rem; }
+      .badges-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1rem; }
+      .badge-item { white-space: normal; font-size: 0.8125rem; line-height: 1.5; }
+      .pillar { grid-template-columns: 1fr; gap: 0.3rem; }
+      .tab-panel.active, html:not(.js-tabs) .tab-panel { grid-template-columns: 1fr; }
+      .product-tabs { gap: 1.25rem; }
+      .tab-btn { font-size: 0.9375rem; }
+      .product-card { padding-block: 1.25rem; }
+      .product-price { font-size: 0.9375rem; max-width: 7.5rem; }
+      .promise-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .promise-list li { align-items: baseline; }
+      .promise-list li::before { align-self: flex-start; margin-top: 0.6rem; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
 
   <link rel="canonical" href="https://www.longbranch-farms.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
@@ -280,34 +473,6 @@
 </head>
 
 <body>
-  <script>
-    /* NOTE: this block is duplicated verbatim on all five pages and must stay
-       in sync. It has to be inline and ahead of the content it governs, so it
-       cannot live in a shared file.
-
-       Progressive enhancement: .reveal content is visible by default in CSS so
-       the page is readable with JS disabled, blocked, or broken. This runs as
-       the first thing in <body>, before any revealed content is parsed or
-       painted, so opting in to the hidden-then-animate state cannot flash. */
-    (function () {
-      if (!('IntersectionObserver' in window)) return;
-      var root = document.documentElement;
-      root.classList.add('js-reveal');
-      // Failsafe: if the observer at the foot of the page never registered,
-      // something downstream broke and the hidden state would be permanent.
-      // Drop back to plain visible content. DOMContentLoaded fires after that
-      // inline script has run, so the check is exact; the timer is a backstop
-      // for a parse that never completes. Deliberately not tied to `load`,
-      // which waits on multi-megabyte photos.
-      var failsafe = function () {
-        if (!root.hasAttribute('data-reveal-observer')) root.classList.remove('js-reveal');
-      };
-      document.addEventListener('DOMContentLoaded', failsafe);
-      setTimeout(failsafe, 2000);
-    })();
-  </script>
-
-
   <!-- Header -->
   <header id="site-header">
     <a href="#hero" class="logo-wrap">
@@ -352,54 +517,33 @@
     <div class="hero-bg bg-photo-24" id="heroBg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow reveal">Kentucky Proud Since 2022</p>
-      <h1 class="hero-headline reveal" style="transition-delay:.1s">
-        Eat local.<br /><em>Trust your food.</em><br />Love the taste.
+      <h1 class="hero-headline">
+        Beef &amp; pork.<br />Raised right here.
       </h1>
-      <p class="hero-sub reveal" style="transition-delay:.2s">
-        Pasture-raised beef and pork grown without antibiotics, vaccines, or shortcuts, by a family that feeds their animals the same care they put into every order.
+      <p class="hero-sub">
+        Pasture-raised pork and grass-finished beef from our family farm in Grayson County, Kentucky.
       </p>
-      <div class="hero-ctas reveal" style="transition-delay:.3s">
+      <div class="hero-ctas">
         <a href="https://shop.longbranch-farms.com" class="btn-primary">Shop Our Cuts</a>
         <a href="about/" class="btn-ghost">Our Story</a>
       </div>
     </div>
   </section>
 
-  <!-- Trust Badges -->
+  <!-- Farm details -->
   <div class="badges">
-    <div class="badges-inner">
-      <span class="badge-item">
-        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        No Antibiotics, Ever
-      </span>
-      <span class="badge-item">
-        <svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Grass-Finished Beef
-      </span>
-      <span class="badge-item">
-        <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Family Owned &amp; Operated
-      </span>
-      <span class="badge-item">
-        <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Grayson County, Kentucky
-      </span>
-      <span class="badge-item">
-        <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Raised with Love
-      </span>
-      <a href="https://www.kyproud.com/members/long-branch-farms" target="_blank" rel="noopener" class="badge-item" style="text-decoration:none;color:rgba(196,164,90,0.75);">
-        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Kentucky Proud Member
-      </a>
-    </div>
+    <ul class="badges-inner" aria-label="About the farm">
+      <li class="badge-item">Grass-finished beef</li>
+      <li class="badge-item">Pasture-raised pork</li>
+      <li class="badge-item">Family owned since 2022</li>
+      <li class="badge-item"><a href="https://www.kyproud.com/members/long-branch-farms" target="_blank" rel="noopener">Kentucky Proud Member</a></li>
+    </ul>
   </div>
 
   <!-- Story -->
   <section id="story">
     <div class="story-inner">
-      <div class="story-images reveal">
+      <div class="story-images">
         <picture>
           <source type="image/webp"
             srcset="images/photo-3-480.webp 480w, images/photo-3-960.webp 960w, images/photo-3-1440.webp 1440w, images/photo-3-1920.webp 1920w"
@@ -422,23 +566,21 @@
             width="1440" height="1920"
             alt="A boy in an orange cap riding an antique Allis-Chalmers tractor with his mom at a fall tractor show" />
         </picture>
-        <span class="story-img-tag">Est. 2022</span>
       </div>
       <div class="story-text">
-        <p class="section-label reveal">Our Story</p>
-        <h2 class="reveal" style="transition-delay:.08s">
-          We know every animal<br /><em>by name.</em>
+        <h2>
+          We know every animal by name.
         </h2>
-        <p class="reveal" style="transition-delay:.12s">
-          Long Branch Farms started with a simple conviction: people in our community deserve to know exactly what they're eating and how it was raised. We're two working parents with a six-year-old and a deep belief that doing things the right way is always worth the extra effort.
+        <p>
+          Long Branch Farms started with a simple conviction: people in our community deserve to know exactly what they're eating and how it was raised. We're two working parents with a six-year-old.
         </p>
-        <p class="reveal" style="transition-delay:.16s">
-          Our pigs have access to pasture and woods. We mix their feed by hand every day and supplement with milk from our A2/A2 dairy cow. Our beef is grass-finished for a leaner, healthier cut. No shortcuts. No chemicals. Just the same standard we hold for our own table.
+        <p>
+          Our pigs have access to pasture and woods. We mix their feed by hand every day and supplement with milk from our A2/A2 dairy cow. Our beef is finished on grass. It's the same food we put on our own table.
         </p>
-        <div class="pillars reveal" style="transition-delay:.2s">
+        <div class="pillars">
           <div class="pillar">
             <p class="pillar-title">Pasture Raised</p>
-            <p>Pigs with access to woods and open pasture, the way nature intended.</p>
+            <p>Pigs with access to woods and open pasture.</p>
           </div>
           <div class="pillar">
             <p class="pillar-title">Hand-Mixed Feed</p>
@@ -446,7 +588,7 @@
           </div>
           <div class="pillar">
             <p class="pillar-title">Grass Finished</p>
-            <p>Beef finished on grass for a leaner, more nutritious final product.</p>
+            <p>Beef raised and finished on grass.</p>
           </div>
           <div class="pillar">
             <p class="pillar-title">No Additives</p>
@@ -512,19 +654,19 @@
   <!-- Products -->
   <section id="products">
     <div class="products-wrap">
-      <p class="section-label reveal" style="color:var(--hay)">From Our Farm</p>
-      <h2 class="products-heading reveal" style="transition-delay:.08s">What we raise &amp; sell</h2>
-      <p class="products-sub reveal" style="transition-delay:.12s">
-        Every cut comes from animals raised on our farm. Availability is seasonal. Sign up to be notified when new inventory drops.
+      <h2 class="products-heading">What we raise &amp; sell</h2>
+      <p class="products-sub">
+        Every cut comes from animals raised on our farm. Check the shop for current seasonal availability.
       </p>
 
-      <div class="product-tabs reveal" style="transition-delay:.16s">
-        <button class="tab-btn active" data-tab="beef">Beef</button>
-        <button class="tab-btn" data-tab="pork">Pork</button>
-        <button class="tab-btn" data-tab="bundles">Bundles &amp; Bulk</button>
+      <div class="product-tabs" role="tablist" aria-label="Farm products">
+        <button class="tab-btn active" type="button" data-tab="beef" role="tab" id="product-tab-beef" aria-controls="tab-beef" aria-selected="true" tabindex="0">Beef</button>
+        <button class="tab-btn" type="button" data-tab="pork" role="tab" id="product-tab-pork" aria-controls="tab-pork" aria-selected="false" tabindex="-1">Pork</button>
+        <button class="tab-btn" type="button" data-tab="bundles" role="tab" id="product-tab-bundles" aria-controls="tab-bundles" aria-selected="false" tabindex="-1">Bundles &amp; Bulk</button>
       </div>
 
-      <div class="tab-panel active" id="tab-beef">
+      <div class="tab-panel active" id="tab-beef" role="tabpanel" aria-labelledby="product-tab-beef" tabindex="0">
+        <h3 class="product-category">Beef</h3>
         <div class="product-card">
           <div>
             <p class="product-name">Ribeye</p>
@@ -555,7 +697,8 @@
         </div>
       </div>
 
-      <div class="tab-panel" id="tab-pork">
+      <div class="tab-panel" id="tab-pork" role="tabpanel" aria-labelledby="product-tab-pork" tabindex="0">
+        <h3 class="product-category">Pork</h3>
         <div class="product-card">
           <div>
             <p class="product-name">Bacon</p>
@@ -621,7 +764,8 @@
         </div>
       </div>
 
-      <div class="tab-panel" id="tab-bundles">
+      <div class="tab-panel" id="tab-bundles" role="tabpanel" aria-labelledby="product-tab-bundles" tabindex="0">
+        <h3 class="product-category">Bundles &amp; Bulk</h3>
         <div class="product-card">
           <div>
             <p class="product-name">Bulk Pork</p>
@@ -652,9 +796,9 @@
         </div>
       </div>
 
-      <div class="products-cta-row reveal">
+      <div class="products-cta-row">
         <a href="https://shop.longbranch-farms.com" class="btn-primary">See All Cuts</a>
-        <p class="products-note">Inventory updates in real time. Low stock moves fast.</p>
+        <p class="products-note">For bulk orders, <a href="contact/">get in touch with us</a>.</p>
       </div>
     </div>
   </section>
@@ -672,7 +816,6 @@
           width="1440" height="1080" loading="lazy"
           alt="Sheep, hogs and a dairy cow sharing a feeder along the fence line on a clear fall evening" />
       </picture>
-      <span class="fg-caption">Pasture Life</span>
     </div>
     <div class="fg-item fg-item-wide fg-item-sm">
       <picture>
@@ -685,7 +828,6 @@
           width="1440" height="1080" loading="lazy"
           alt="A black cow standing over her white newborn calf in the pasture" />
       </picture>
-      <span class="fg-caption">Long Branch Land</span>
     </div>
     <div class="fg-item fg-item-sm">
       <picture>
@@ -698,7 +840,6 @@
           width="1440" height="1080" loading="lazy"
           alt="Bush-hogging tall grass on an old tractor at the edge of the tree line" />
       </picture>
-      <span class="fg-caption">Raised Naturally</span>
     </div>
     <div class="fg-item fg-item-sm">
       <picture>
@@ -711,7 +852,6 @@
           width="1440" height="1920" loading="lazy"
           alt="A Jersey cow stretching her nose out for a scratch on the muzzle" />
       </picture>
-      <span class="fg-caption">Every Day</span>
     </div>
   </div>
 
@@ -719,17 +859,16 @@
   <section id="promise">
     <div class="promise-inner">
       <div class="promise-text">
-        <p class="section-label reveal" style="color:var(--hay)">Our Promise</p>
-        <h2 class="reveal" style="transition-delay:.08s">
-          Raised as <em>naturally<br />as possible.</em> Period.
+        <h2>
+          Raised as naturally as possible.
         </h2>
-        <p class="reveal" style="transition-delay:.12s">
-          We don't cut corners because we can't. We're the ones eating this food too. Everything we raise goes through the same standard: if we wouldn't feed it to our own family, it doesn't leave this farm.
+        <p>
+          Everything we raise goes through the same standard: if we wouldn't feed it to our own family, it doesn't leave this farm.
         </p>
-        <p class="reveal" style="transition-delay:.16s">
-          Our pigs run in woods and open pasture. Their feed is mixed by us every single day. Our beef grazes on grass from start to finish. These aren't marketing claims. They're just how we farm.
+        <p>
+          Our pigs run in woods and open pasture. Their feed is mixed by us every day. Our beef grazes on grass from start to finish.
         </p>
-        <ul class="promise-list reveal" style="transition-delay:.2s">
+        <ul class="promise-list">
           <li>No antibiotics</li>
           <li>No vaccines</li>
           <li>No hormones</li>
@@ -740,7 +879,7 @@
           <li>Grass-finished beef</li>
         </ul>
       </div>
-      <div class="promise-image reveal" style="transition-delay:.1s">
+      <div class="promise-image">
         <picture>
           <source type="image/webp"
             srcset="images/photo-5-480.webp 480w, images/photo-5-960.webp 960w, images/photo-5-1440.webp 1440w"
@@ -751,28 +890,26 @@
             width="1440" height="1920" loading="lazy"
             alt="The farm's six-year-old grinning as he carries one of the ducks across the barn lot" />
         </picture>
-        <span class="promise-image-tag">Naturally Raised</span>
       </div>
     </div>
   </section>
 
   <!-- Quote Band -->
-  <div class="quote-band">
-    <span class="quote-mark reveal">&ldquo;</span>
-    <p class="quote-text reveal" style="transition-delay:.08s">
+  <figure class="quote-band">
+    <blockquote class="quote-text">
       We want to provide the healthiest, best tasting food to our locals, people who know what they're being fed and how it was cared for.
-    </p>
-    <p class="quote-attr reveal" style="transition-delay:.14s">Courtney Decker, Long Branch Farms</p>
-  </div>
+    </blockquote>
+    <figcaption class="quote-attr">Courtney Decker, Long Branch Farms</figcaption>
+  </figure>
 
   <!-- CTA -->
   <section id="cta">
     <div class="cta-bg bg-photo-6"></div>
     <div class="cta-overlay"></div>
     <div class="cta-content">
-      <h2 class="reveal">Ready to fill your <em>freezer</em><br />the right way?</h2>
-      <p class="reveal" style="transition-delay:.1s">Bulk orders, bundle boxes, and individual cuts available. Inventory is limited and moves fast. Check the store for current availability.</p>
-      <div class="cta-btns reveal" style="transition-delay:.18s">
+      <h2>From our farm to your freezer.</h2>
+      <p>Choose individual cuts, bundle boxes, or a bulk order. Check the shop for availability, or ask us about filling your freezer.</p>
+      <div class="cta-btns">
         <a href="https://shop.longbranch-farms.com" class="btn-primary">Shop Now</a>
         <a href="contact/" class="btn-ghost">Ask a Question</a>
       </div>
@@ -805,7 +942,7 @@
           <p>120 Long Branch Drive<br />Leitchfield, KY 42754</p>
           <a href="mailto:longbranchfarmsky@gmail.com">longbranchfarmsky@gmail.com</a>
           <a href="https://www.kyproud.com/members/long-branch-farms" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:0.75rem;">
-            🌿 Kentucky Proud Member
+            Kentucky Proud Member
           </a>
           <div class="social-row">
             <a href="https://www.facebook.com/profile.php?id=61573708114780" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
@@ -917,30 +1054,32 @@
     const bg = document.getElementById('heroBg');
     window.addEventListener('load', () => { bg.classList.add('loaded'); });
 
-    // Scroll reveal
-    // Guarded so a browser without IntersectionObserver does not throw here and
-    // abort the rest of this script. Without the observer the .reveal elements
-    // simply stay visible (see the failsafe at the top of <body>).
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-      // Signals to that failsafe that the reveal machinery is live.
-      document.documentElement.setAttribute('data-reveal-observer', 'on');
+    // Product categories: keyboard navigation follows the tab pattern.
+    const productTabs = Array.from(document.querySelectorAll('.tab-btn'));
+    function selectProductTab(btn) {
+      productTabs.forEach(tab => {
+        const selected = tab === btn;
+        tab.classList.toggle('active', selected);
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById('tab-' + tab.dataset.tab).classList.toggle('active', selected);
+      });
     }
-
-    // Product tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    productTabs.forEach((btn, index) => {
+      btn.addEventListener('click', () => selectProductTab(btn));
+      btn.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % productTabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + productTabs.length) % productTabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = productTabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectProductTab(productTabs[next]);
+        productTabs[next].focus();
       });
     });
+    document.documentElement.classList.add('js-tabs');
   </script>
 
 </body>
