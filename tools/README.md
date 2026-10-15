@@ -198,3 +198,11 @@ another project), the script finds it on its own and the two setup lines
 above can be skipped. It prints one line per check and a pass/fail count at
 the end, and saves a screenshot of every page to `tools/.e2e-shots/` (not
 committed) so a failure can be looked at, not just read about.
+
+To check a site that's already deployed instead of the local copy, pass its
+URL — useful right after a Cloudflare Pages deploy, before pointing the real
+domain at it:
+
+```sh
+node tools/e2e-check.mjs https://longbranch-farms.pages.dev
+```

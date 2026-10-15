@@ -4,9 +4,15 @@
  *
  *   node tools/e2e-check.mjs
  *
- * It starts tools/dev-server.mjs itself (so routing, the 404 page, and the
- * old /*.html redirect stubs all behave exactly as they would on a real
- * static host) and then, with Playwright, visits every page at a phone size
+ * By default it starts tools/dev-server.mjs itself (so routing, the 404
+ * page, and the old /*.html redirect stubs all behave exactly as they would
+ * on a real static host). Pass a URL to check an already-deployed site
+ * instead -- useful right after a Cloudflare Pages deploy, before pointing
+ * the real domain at it:
+ *
+ *   node tools/e2e-check.mjs https://longbranch-farms.pages.dev
+ *
+ * Either way, with Playwright, it visits every page at a phone size
  * and a desktop size and checks:
  *
  *   - the page loads with no failed network requests and no console errors
@@ -118,8 +124,11 @@ async function main() {
   const { chromium } = loadPlaywright();
   await mkdir(SHOTS, { recursive: true });
 
-  const { url: base, close } = await startServer();
-  console.log(`dev server: ${base}\n`);
+  const remoteBase = process.argv[2];
+  const { url: base, close } = remoteBase
+    ? { url: remoteBase.replace(/\/$/, ''), close: async () => {} }
+    : await startServer();
+  console.log(`${remoteBase ? 'target' : 'dev server'}: ${base}\n`);
 
   const browser = await chromium.launch(process.env.CMS_TEST_BROWSER ? { executablePath: process.env.CMS_TEST_BROWSER, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] } : {});
 
