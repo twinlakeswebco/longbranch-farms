@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-13.jpeg",
+    "files": {
+      "photo-13-1440.webp": "/images/photo-13-1440.webp",
+      "photo-13-480.jpeg": "/images/photo-13-480.jpeg",
+      "photo-13-480.webp": "/images/photo-13-480.webp",
+      "photo-13-960.jpeg": "/images/photo-13-960.jpeg",
+      "photo-13-960.webp": "/images/photo-13-960.webp",
+      "photo-13.jpeg": "/images/photo-13.jpeg"
+    },
+    "alt": "A Jersey cow stretching her nose out for a scratch on the muzzle",
+    "width": 1440,
+    "height": 1920
+  }
+}

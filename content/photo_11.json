@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-11.jpeg",
+    "files": {
+      "photo-11-1440.webp": "/images/photo-11-1440.webp",
+      "photo-11-1920.jpeg": "/images/photo-11-1920.jpeg",
+      "photo-11-1920.webp": "/images/photo-11-1920.webp",
+      "photo-11-480.jpeg": "/images/photo-11-480.jpeg",
+      "photo-11-480.webp": "/images/photo-11-480.webp",
+      "photo-11-960.jpeg": "/images/photo-11-960.jpeg",
+      "photo-11-960.webp": "/images/photo-11-960.webp",
+      "photo-11.jpeg": "/images/photo-11.jpeg"
+    },
+    "alt": "Bush-hogging tall grass on an old tractor at the edge of the tree line",
+    "width": 1440,
+    "height": 1080
+  }
+}

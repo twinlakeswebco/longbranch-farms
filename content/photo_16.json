@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-16.jpeg",
+    "files": {
+      "photo-16-1440.webp": "/images/photo-16-1440.webp",
+      "photo-16-1920.jpeg": "/images/photo-16-1920.jpeg",
+      "photo-16-1920.webp": "/images/photo-16-1920.webp",
+      "photo-16-480.jpeg": "/images/photo-16-480.jpeg",
+      "photo-16-480.webp": "/images/photo-16-480.webp",
+      "photo-16-960.jpeg": "/images/photo-16-960.jpeg",
+      "photo-16-960.webp": "/images/photo-16-960.webp",
+      "photo-16.jpeg": "/images/photo-16.jpeg"
+    },
+    "alt": "Four red hogs grazing across a hillside pasture full of yellow buttercups",
+    "width": 1440,
+    "height": 1080
+  }
+}

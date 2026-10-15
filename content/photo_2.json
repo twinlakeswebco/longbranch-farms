@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-2.jpeg",
+    "files": {
+      "photo-2-1440.webp": "/images/photo-2-1440.webp",
+      "photo-2-1920.jpeg": "/images/photo-2-1920.jpeg",
+      "photo-2-1920.webp": "/images/photo-2-1920.webp",
+      "photo-2-480.jpeg": "/images/photo-2-480.jpeg",
+      "photo-2-480.webp": "/images/photo-2-480.webp",
+      "photo-2-960.jpeg": "/images/photo-2-960.jpeg",
+      "photo-2-960.webp": "/images/photo-2-960.webp",
+      "photo-2.jpeg": "/images/photo-2.jpeg"
+    },
+    "alt": "Sheep, hogs and a dairy cow sharing a feeder along the fence line on a clear fall evening",
+    "width": 1440,
+    "height": 1080
+  }
+}

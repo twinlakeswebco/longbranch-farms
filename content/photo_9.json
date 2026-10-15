@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-9.jpeg",
+    "files": {
+      "photo-9-1440.webp": "/images/photo-9-1440.webp",
+      "photo-9-1920.jpeg": "/images/photo-9-1920.jpeg",
+      "photo-9-1920.webp": "/images/photo-9-1920.webp",
+      "photo-9-480.jpeg": "/images/photo-9-480.jpeg",
+      "photo-9-480.webp": "/images/photo-9-480.webp",
+      "photo-9-960.jpeg": "/images/photo-9-960.jpeg",
+      "photo-9-960.webp": "/images/photo-9-960.webp",
+      "photo-9.jpeg": "/images/photo-9.jpeg"
+    },
+    "alt": "A black cow standing over her white newborn calf in the pasture",
+    "width": 1440,
+    "height": 1080
+  }
+}

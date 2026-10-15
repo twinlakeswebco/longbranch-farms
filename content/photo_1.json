@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-1.jpeg",
+    "files": {
+      "photo-1-1440.webp": "/images/photo-1-1440.webp",
+      "photo-1-1920.jpeg": "/images/photo-1-1920.jpeg",
+      "photo-1-1920.webp": "/images/photo-1-1920.webp",
+      "photo-1-480.jpeg": "/images/photo-1-480.jpeg",
+      "photo-1-480.webp": "/images/photo-1-480.webp",
+      "photo-1-960.jpeg": "/images/photo-1-960.jpeg",
+      "photo-1-960.webp": "/images/photo-1-960.webp",
+      "photo-1.jpeg": "/images/photo-1.jpeg"
+    },
+    "alt": "A white-faced cow and her calf standing with the black cattle herd on a foggy winter pasture",
+    "width": 1440,
+    "height": 1080
+  }
+}

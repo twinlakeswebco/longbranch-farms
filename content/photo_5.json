@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-5.jpeg",
+    "files": {
+      "photo-5-1440.webp": "/images/photo-5-1440.webp",
+      "photo-5-480.jpeg": "/images/photo-5-480.jpeg",
+      "photo-5-480.webp": "/images/photo-5-480.webp",
+      "photo-5-960.jpeg": "/images/photo-5-960.jpeg",
+      "photo-5-960.webp": "/images/photo-5-960.webp",
+      "photo-5.jpeg": "/images/photo-5.jpeg"
+    },
+    "alt": "Our little boy grinning as he carries one of the ducks across the barn lot",
+    "width": 1440,
+    "height": 1920
+  }
+}

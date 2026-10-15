@@ -1,5 +1,5 @@
 # robots.txt for Long Branch Farms
-# Every page of the site is meant to be found.
+# Public website pages are meant to be found.
 
 User-agent: *
 Allow: /
@@ -8,5 +8,9 @@ Allow: /
 # owner's personal contact details, so it must not be indexed. Note that this
 # only stops well-behaved crawlers -- exclude /docs/ at deploy time as well.
 Disallow: /docs/
+
+# The editor is not a public landing page. Authentication is enforced by GitHub.
+Disallow: /admin/
+Disallow: /content/
 
 Sitemap: https://www.longbranch-farms.com/sitemap.xml

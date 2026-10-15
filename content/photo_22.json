@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-22.jpeg",
+    "files": {
+      "photo-22-1440.webp": "/images/photo-22-1440.webp",
+      "photo-22-480.jpeg": "/images/photo-22-480.jpeg",
+      "photo-22-480.webp": "/images/photo-22-480.webp",
+      "photo-22-960.jpeg": "/images/photo-22-960.jpeg",
+      "photo-22-960.webp": "/images/photo-22-960.webp",
+      "photo-22.jpeg": "/images/photo-22.jpeg"
+    },
+    "alt": "Contact \u2014 bottom background; Terms \u2014 top background",
+    "width": 1440,
+    "height": 1920
+  }
+}

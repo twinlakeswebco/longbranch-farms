@@ -1,0 +1,32 @@
+:root { --farm-ink: #1a1208; --farm-green: #3b4a2f; --farm-cream: #f5f0e8; }
+.loading { margin: 3rem; font: 1.125rem/1.6 system-ui, sans-serif; color: var(--farm-ink); }
+.farm-editor { background: white; padding: 1rem; border-radius: 8px; color-scheme: light; color: var(--farm-ink); font: 1rem/1.55 system-ui, sans-serif; max-width: 60rem; }
+.farm-editor p { margin: 0.75rem 0; max-width: 65ch; }
+.farm-editor button, .farm-editor input, .farm-editor textarea { font: inherit; }
+.farm-editor button { min-height: 44px; padding: 0.65rem 1.1rem; border: 1px solid var(--farm-green); border-radius: 8px; background: var(--farm-green); color: white; cursor: pointer; }
+.farm-editor button:hover { background: #293522; }
+.farm-editor button:disabled { opacity: 0.55; cursor: default; }
+.farm-editor .secondary { background: white; color: var(--farm-green); }
+.farm-editor :focus-visible { outline: 3px solid #79590f; outline-offset: 3px; }
+.farm-editor input[type="checkbox"], .farm-editor input[type="radio"] { width: 22px; height: 22px; accent-color: var(--farm-green); flex-shrink: 0; }
+.farm-editor .choice { display: flex; align-items: center; gap: 0.75rem; min-height: 44px; cursor: pointer; }
+.farm-editor textarea { display: block; width: 100%; box-sizing: border-box; min-height: 5rem; border: 1px solid #82745f; border-radius: 6px; padding: 0.7rem; caret-color: var(--farm-green); }
+.farm-editor .photo-frame { display: flex; align-items: center; justify-content: center; background: var(--farm-cream); min-height: 10rem; overflow: hidden; }
+.farm-editor .photo-frame img { display: block; max-width: 100%; max-height: 260px; object-fit: contain; }
+.farm-editor .photo-frame.rotated { height: 260px; }
+.farm-editor .photo-frame.rotated img { transform: rotate(-90deg); max-width: 240px; max-height: 240px; }
+.farm-editor .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.farm-editor figure { margin: 0; min-width: 0; }
+.farm-editor figcaption { margin: 0.4rem 0; font-weight: 600; }
+.farm-editor .warning { padding: 0.8rem; background: #fff1cf; color: #604000; border-radius: 6px; }
+.farm-editor .error { color: #9b251b; font-weight: 600; }
+.farm-editor .success { color: #314327; font-weight: 600; }
+.farm-editor .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.farm-editor dialog { color: var(--farm-ink); background: white; border: 1px solid #82745f; border-radius: 12px; box-shadow: 0 18px 65px #1a120840; padding: clamp(1rem, 4vw, 2rem); width: min(680px, calc(100vw - 3rem)); max-height: 85svh; overflow: auto; }
+.farm-editor dialog::backdrop { background: #1a1208a6; }
+.farm-editor h2 { font: 600 1.5rem/1.3 Georgia, serif; margin: 0 0 1rem; }
+.farm-editor fieldset { border: 0; margin: 1.2rem 0; padding: 0; min-width: 0; }
+.farm-editor legend { font-weight: 600; margin-bottom: 0.5rem; }
+.farm-editor ::selection { background: #dfc07a; color: #1a1208; }
+.farm-editor a { color: #3b4a2f; text-underline-offset: 3px; }
+@media(max-width: 480px) { .farm-editor .photos { gap: 0.5rem; } .farm-editor .photos .photo-frame { min-height: 140px; } .farm-editor .photos img { max-height: 140px; } .farm-editor dialog { width: calc(100vw - 2.5rem); padding: 1rem; } }

@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-3.jpeg",
+    "files": {
+      "photo-3-1440.webp": "/images/photo-3-1440.webp",
+      "photo-3-1920.jpeg": "/images/photo-3-1920.jpeg",
+      "photo-3-1920.webp": "/images/photo-3-1920.webp",
+      "photo-3-480.jpeg": "/images/photo-3-480.jpeg",
+      "photo-3-480.webp": "/images/photo-3-480.webp",
+      "photo-3-960.jpeg": "/images/photo-3-960.jpeg",
+      "photo-3-960.webp": "/images/photo-3-960.webp",
+      "photo-3.jpeg": "/images/photo-3.jpeg"
+    },
+    "alt": "Cattle crowded along a feed line in the snow while a small child in a hooded snowsuit watches from behind the fence",
+    "width": 1440,
+    "height": 1080
+  }
+}
