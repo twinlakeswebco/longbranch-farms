@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-24-background.jpeg",
+    "files": {
+      "photo-24-background-1440.webp": "/images/photo-24-background-1440.webp",
+      "photo-24-background-1920.jpeg": "/images/photo-24-background-1920.jpeg",
+      "photo-24-background-1920.webp": "/images/photo-24-background-1920.webp",
+      "photo-24-background-480.jpeg": "/images/photo-24-background-480.jpeg",
+      "photo-24-background-480.webp": "/images/photo-24-background-480.webp",
+      "photo-24-background-960.jpeg": "/images/photo-24-background-960.jpeg",
+      "photo-24-background-960.webp": "/images/photo-24-background-960.webp",
+      "photo-24-background.jpeg": "/images/photo-24-background.jpeg"
+    },
+    "alt": "Home \u2014 hero photo at the very top",
+    "width": 1440,
+    "height": 713
+  }
+}

@@ -121,7 +121,7 @@ async function main() {
   const { url: base, close } = await startServer();
   console.log(`dev server: ${base}\n`);
 
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.CMS_TEST_BROWSER ? { executablePath: process.env.CMS_TEST_BROWSER, args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] } : {});
 
   try {
     await checkRoutes(browser, base);

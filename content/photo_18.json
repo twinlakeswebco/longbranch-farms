@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-18.jpeg",
+    "files": {
+      "photo-18-1440.webp": "/images/photo-18-1440.webp",
+      "photo-18-480.jpeg": "/images/photo-18-480.jpeg",
+      "photo-18-480.webp": "/images/photo-18-480.webp",
+      "photo-18-960.jpeg": "/images/photo-18-960.jpeg",
+      "photo-18-960.webp": "/images/photo-18-960.webp",
+      "photo-18.jpeg": "/images/photo-18.jpeg"
+    },
+    "alt": "About \u2014 bottom background",
+    "width": 1440,
+    "height": 1920
+  }
+}

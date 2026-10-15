@@ -1,0 +1,25 @@
+{
+  "home": {
+    "file": "index.html",
+    "label": "Home \u2014 website wording",
+    "fields": {
+      "hero_sub": "Introduction below the main headline",
+      "story_intro": "Our story \u2014 first paragraph",
+      "story_details": "Our story \u2014 second paragraph",
+      "promise_intro": "Our promise \u2014 first paragraph",
+      "promise_details": "Our promise \u2014 second paragraph",
+      "quote": "Courtney\u2019s quote near the bottom"
+    }
+  },
+  "about": {
+    "file": "about/index.html",
+    "label": "About \u2014 family and farm story",
+    "fields": {
+      "about_intro": "Introduction beside the family photo",
+      "why_started": "Why we started \u2014 first paragraph",
+      "family_story": "Our family \u2014 second paragraph",
+      "farming_details": "How we raise our animals \u2014 third paragraph",
+      "service_area": "Where we serve \u2014 fourth paragraph"
+    }
+  }
+}

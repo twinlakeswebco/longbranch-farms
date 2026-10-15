@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-4.jpeg",
+    "files": {
+      "photo-4-1440.webp": "/images/photo-4-1440.webp",
+      "photo-4-1920.jpeg": "/images/photo-4-1920.jpeg",
+      "photo-4-1920.webp": "/images/photo-4-1920.webp",
+      "photo-4-480.jpeg": "/images/photo-4-480.jpeg",
+      "photo-4-480.webp": "/images/photo-4-480.webp",
+      "photo-4-960.jpeg": "/images/photo-4-960.jpeg",
+      "photo-4-960.webp": "/images/photo-4-960.webp",
+      "photo-4.jpeg": "/images/photo-4.jpeg"
+    },
+    "alt": "Woolly Mangalitsa hogs rooting along the fence in tall summer grass, with the barn and rolling fields behind them",
+    "width": 1440,
+    "height": 1080
+  }
+}

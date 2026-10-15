@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-10.jpeg",
+    "files": {
+      "photo-10-1440.webp": "/images/photo-10-1440.webp",
+      "photo-10-480.jpeg": "/images/photo-10-480.jpeg",
+      "photo-10-480.webp": "/images/photo-10-480.webp",
+      "photo-10-960.jpeg": "/images/photo-10-960.jpeg",
+      "photo-10-960.webp": "/images/photo-10-960.webp",
+      "photo-10.jpeg": "/images/photo-10.jpeg"
+    },
+    "alt": "A white calf with black ears standing close to a farmer kneeling at the fence, its mother watching alongside",
+    "width": 1440,
+    "height": 1920
+  }
+}

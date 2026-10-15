@@ -1,0 +1,11 @@
+{
+  "photo": {
+    "src": "/images/og-image.jpg",
+    "files": {
+      "og-image.jpg": "/images/og-image.jpg"
+    },
+    "alt": "Long Branch Farms",
+    "width": 1200,
+    "height": 630
+  }
+}

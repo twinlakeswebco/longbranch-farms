@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-21.jpeg",
+    "files": {
+      "photo-21-1440.webp": "/images/photo-21-1440.webp",
+      "photo-21-480.jpeg": "/images/photo-21-480.jpeg",
+      "photo-21-480.webp": "/images/photo-21-480.webp",
+      "photo-21-960.jpeg": "/images/photo-21-960.jpeg",
+      "photo-21-960.webp": "/images/photo-21-960.webp",
+      "photo-21.jpeg": "/images/photo-21.jpeg"
+    },
+    "alt": "A litter of striped piglets crowded shoulder to shoulder in the straw of the barn stall",
+    "width": 1440,
+    "height": 1920
+  }
+}

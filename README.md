@@ -36,3 +36,9 @@ paste it into that one line in `contact/index.html`. Nothing else changes.
 If the form ever fails to send, the page keeps the visitor's typed message on
 screen and shows the farm's phone number and email address, so nobody hits a
 dead end.
+
+## Website editor
+
+The Sveltia CMS editor lives at `/admin/`. See [the editor guide](docs/CMS-Guide.md)
+for Courtney's photo and wording instructions, the GitHub/OAuth activation steps,
+and developer verification. Products and orders remain in Shopify.

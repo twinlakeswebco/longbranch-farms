@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-20.jpeg",
+    "files": {
+      "photo-20-1440.webp": "/images/photo-20-1440.webp",
+      "photo-20-480.jpeg": "/images/photo-20-480.jpeg",
+      "photo-20-480.webp": "/images/photo-20-480.webp",
+      "photo-20-960.jpeg": "/images/photo-20-960.jpeg",
+      "photo-20-960.webp": "/images/photo-20-960.webp",
+      "photo-20.jpeg": "/images/photo-20.jpeg"
+    },
+    "alt": "The Long Branch Farms family bundled up together in a snow-covered farm vehicle",
+    "width": 1440,
+    "height": 1920
+  }
+}

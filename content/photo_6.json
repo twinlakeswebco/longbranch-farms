@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-6.jpeg",
+    "files": {
+      "photo-6-1440.webp": "/images/photo-6-1440.webp",
+      "photo-6-480.jpeg": "/images/photo-6-480.jpeg",
+      "photo-6-480.webp": "/images/photo-6-480.webp",
+      "photo-6-960.jpeg": "/images/photo-6-960.jpeg",
+      "photo-6-960.webp": "/images/photo-6-960.webp",
+      "photo-6.jpeg": "/images/photo-6.jpeg"
+    },
+    "alt": "Home \u2014 bottom background behind \u201cFrom our farm to your freezer\u201d",
+    "width": 1440,
+    "height": 1920
+  }
+}

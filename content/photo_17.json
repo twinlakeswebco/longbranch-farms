@@ -1,0 +1,18 @@
+{
+  "photo": {
+    "src": "/images/photo-17.jpeg",
+    "files": {
+      "photo-17-1440.webp": "/images/photo-17-1440.webp",
+      "photo-17-1920.jpeg": "/images/photo-17-1920.jpeg",
+      "photo-17-1920.webp": "/images/photo-17-1920.webp",
+      "photo-17-480.jpeg": "/images/photo-17-480.jpeg",
+      "photo-17-480.webp": "/images/photo-17-480.webp",
+      "photo-17-960.jpeg": "/images/photo-17-960.jpeg",
+      "photo-17-960.webp": "/images/photo-17-960.webp",
+      "photo-17.jpeg": "/images/photo-17.jpeg"
+    },
+    "alt": "Two Jersey milk cows in their barn stalls, looking out through the open gate at the pasture",
+    "width": 1440,
+    "height": 1080
+  }
+}

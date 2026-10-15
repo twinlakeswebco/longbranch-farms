@@ -1,0 +1,16 @@
+{
+  "photo": {
+    "src": "/images/photo-15.jpeg",
+    "files": {
+      "photo-15-1284.webp": "/images/photo-15-1284.webp",
+      "photo-15-480.jpeg": "/images/photo-15-480.jpeg",
+      "photo-15-480.webp": "/images/photo-15-480.webp",
+      "photo-15-960.jpeg": "/images/photo-15-960.jpeg",
+      "photo-15-960.webp": "/images/photo-15-960.webp",
+      "photo-15.jpeg": "/images/photo-15.jpeg"
+    },
+    "alt": "A white calf grazing in winter grass while a child in canvas coveralls reaches down to scratch its head",
+    "width": 1284,
+    "height": 1698
+  }
+}
