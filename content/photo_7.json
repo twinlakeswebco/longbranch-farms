@@ -9,8 +9,9 @@
       "photo-7-960.webp": "/images/photo-7-960.webp",
       "photo-7.jpeg": "/images/photo-7.jpeg"
     },
-    "alt": "A boy in an orange cap riding an antique Allis-Chalmers tractor with his mom at a fall tractor show",
+    "alt": "Our son holding a duck",
     "width": 1440,
-    "height": 1920
+    "height": 1920,
+    "orientationAnswer": "yes"
   }
 }
